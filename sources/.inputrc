@@ -1,0 +1,13 @@
+# alternate mappings for "page up" and "page down" to search the history
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
+
+### from HABR ###
+set colored-stats On
+set completion-ignore-case On
+set colored-completion-prefix On
+#set completion-prefix-display-length 3
+set mark-symlinked-directories On
+set show-all-if-ambiguous On
+set show-all-if-unmodified On
+set visible-stats On

@@ -1,0 +1,35 @@
+[flags]
+tree = true # процессы в виде дерева
+default_widget_type = "proc" # виджето по умолчнию - процессы
+battery = false # отключение виджета батарея
+left_legend = true  # расположение агрегатора CPU слева
+hide_avg_cpu = true  # Скрыть среднее потребление CPU
+[disk_filter]
+is_list_ignored = true
+list = ["/dev/loop*"] # игнорирую все /dev/loop*
+regex = true
+case_sensitive = true
+whole_word = false
+
+[[row]] # ряд №1 - CPU 
+  ratio=1
+  [[row.child]]
+  type="cpu"
+[[row]] # ряд №2 - процессы и диски
+  ratio=2
+  [[row.child]]
+    ratio=5
+    [[row.child.child]]
+      type="proc"
+  [[row.child]]
+    ratio=2
+    [[row.child.child]]
+      type="disk"
+[[row]] # ряд №3 - потребление памяти и сетевых интерфейсов
+  ratio=1
+  [[row.child]]
+    [[row.child.child]]
+      type="mem"
+  [[row.child]]
+    [[row.child.child]]
+      type="net"
