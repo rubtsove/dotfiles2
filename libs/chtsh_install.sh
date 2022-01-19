@@ -28,12 +28,13 @@ color_string
 echo -e "${GREY}Конец установки ${YELLOW}CHT.SH${NOFORMAT}"
 color_string
 
-anykey && clear
+echo
+
 ###### completion block
 color_string
 echo -e "${GREY}Начало установки ${YELLOW}CHT.SH completion${NOFORMAT}"
 color_string
-if [[ -f "${DEST_BASH_COMPLETION}chtsh.sh" ]];then
+if [[ -f "${DEST_BASH_COMPLETION}"/chtsh.sh ]];then
   echo -e "${GREEN}Упсик,а файлик ${ORANGE}chtsh.sh(completion)${GREEN} - уже существует ${NOFORMAT}"
 else 
   if wget --quiet --spider "${CHT_COMPL}";then

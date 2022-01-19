@@ -32,7 +32,9 @@ fi
 color_string
 echo -e "${GREY}Конец установки ${YELLOW}PROCS${NOFORMAT}"
 color_string
+
 echo
+
 #####completion
 color_string
 echo -e "${GREY}Начало установки ${YELLOW}PROCS completions${NOFORMAT}"
