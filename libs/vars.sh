@@ -51,6 +51,7 @@ BTM_SOURCE_ARCH="https://github.com/ClementTsang/bottom/releases/download/0.6.6/
 BTM_CONFIG="${GITHUB_PATH}/.config/bottom/bottom.toml"
 
 BAT_SOURCE_DEB="https://github.com/sharkdp/bat/releases/download/v0.19.0/bat_0.19.0_amd64.deb"
+BAT_SOURCE"=https://github.com/sharkdp/bat/releases/download/v0.19.0/bat-v0.19.0-x86_64-unknown-linux-musl.tar.gz"
 
 FZF_SOURCE="https://github.com/junegunn/fzf.git"
 FZF_DIR="$HOME/.fzf"

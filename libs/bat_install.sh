@@ -13,20 +13,23 @@ TMP_FOLDER="/tmp/bat" && mkdir -p "${TMP_FOLDER}"
 if [[ -f $(which bat) ]] ;then
   echo -e "${GREEN}Упсик,а файлик ${ORANGE}BAT${GREEN} - уже существует в $(which bat)${NOFORMAT}"
 else
-  if [[ "${OS_VER}" == "ubuntu" ]] || [[ "${OS_VER}" == "debian" ]] ; then
-    if wget --quiet --spider "${BAT_SOURCE_DEB}"; then
-      echo -e "${GREEN}Архив с установщиком ${ORANGE}BAT${GREEN} ДОСТУПЕН для загрузки${NOFORMAT}\n"
-      wget --quiet "${BAT_SOURCE_DEB}" --directory-prefix="${TMP_FOLDER}"
-      dpkg -i "${TMP_FOLDER}"/bat*.deb
-      echo -e "\n${ORANGE}BAT${GREEN} установлен в папку: ${ORANGE}$(which bat)${NOFORMAT}" &&\
-        log "bat.deb успешно установлен" 
-      rm -rf "${TMP_FOLDER}" && echo -e "${GREEN}инсталяционный файл ${ORANGE}BAT${GREEN} удалён${NOFORMAT}"
-    else
-      echo -e "${GREY}Файлик bat.deb ${RED}НЕдоступен${GREY} для загрузки${NOFORMAT}" &&\
-        err "Файлик bat.deb НЕДОСТУПЕН для загрузки" 
-    fi
+  if wget --quiet --spider "${BAT_SOURCE}"; then
+    echo -e "${GREEN}Архив ${ORANGE}BAT${GREEN} ДОСТУПЕН для загрузки${NOFORMAT}\n"
+    wget --quiet "${BAT_SOURCE_DEB}" --directory-prefix="${TMP_FOLDER}"
+    mv "${TMP_FOLDER}"/bat*.tar.gz "${TMP_FOLDER}"/bat.tar.gz
+    tar -xvf "${TMP_FOLDER}"/bat.tar.gz -C "${TMP_FOLDER}"
+    rm "${TMP_FOLDER}"/*.tar.gz
+    mv "${TMP_FOLDER}"/bat*/* "${TMP_FOLDER}"
+    cp -rfv "${TMP_FOLDER}"/bat "${DEST_LOCALBIN}" && chmod +x "${DEST_LOCALBIN}"/bat
+	  echo -e "${GREEN}Файл ${ORANGE}BAT${GREEN} скопирован в папку: ${ORANGE}$(which bat)${NOFORMAT}" &&\
+      log "Бинарный файл bam скопирован загружен"
+    cp -rfv "${TMP_FOLDER}"/autocomplete/bat.bash "${DEST_BASH_COMPLETION}"
+	  echo -e "${GREEN}Файл ${ORANGE}bat.bash${GREEN} скопирован в папку ${ORANGE}/etc/bash_completion.d/${NOFORMAT}" &&\
+      log "Файл bat.bash скопирован в папку /etc/bash_completion.d/"
+    rm -rf "${TMP_FOLDER}" && echo -e "${GREEN}Архив ${ORANGE}BAT${GREEN} удалён${NOFORMAT}"
   else
-      echo -e "${GREY}У нас ${RED}НЕ deb like${GREY} система - НЕ могу установить${NOFORMAT}"
+    echo -e "${GREY}Архив BAT ${RED}НЕдоступен${GREY} для загрузки${NOFORMAT}"&&\
+      err "Архив BAT НЕДОСТУПЕН для загрузки" 
   fi
 fi
 color_string
