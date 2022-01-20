@@ -50,7 +50,7 @@ EXA_SOURCE_ARCH="https://github.com/ogham/exa/releases/download/v0.10.1/exa-linu
 BTM_SOURCE_ARCH="https://github.com/ClementTsang/bottom/releases/download/0.6.6/bottom_x86_64-unknown-linux-gnu.tar.gz"
 BTM_CONFIG="${GITHUB_PATH}/.config/bottom/bottom.toml"
 
-BAT_SOURCE_DEB="https://github.com/sharkdp/bat/releases/download/v0.19.0/bat_0.19.0_amd64.deb"
+#BAT_SOURCE_DEB="https://github.com/sharkdp/bat/releases/download/v0.19.0/bat_0.19.0_amd64.deb"
 BAT_SOURCE="https://github.com/sharkdp/bat/releases/download/v0.19.0/bat-v0.19.0-x86_64-unknown-linux-musl.tar.gz"
 
 FZF_SOURCE="https://github.com/junegunn/fzf.git"

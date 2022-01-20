@@ -15,7 +15,7 @@ if [[ -f $(which bat) ]] ;then
 else
   if wget --quiet --spider "${BAT_SOURCE}"; then
     echo -e "${GREEN}Архив ${ORANGE}BAT${GREEN} ДОСТУПЕН для загрузки${NOFORMAT}\n"
-    wget --quiet "${BAT_SOURCE_DEB}" --directory-prefix="${TMP_FOLDER}"
+    wget --quiet "${BAT_SOURCE}" --directory-prefix="${TMP_FOLDER}"
     mv "${TMP_FOLDER}"/bat*.tar.gz "${TMP_FOLDER}"/bat.tar.gz
     tar -xvf "${TMP_FOLDER}"/bat.tar.gz -C "${TMP_FOLDER}"
     rm "${TMP_FOLDER}"/*.tar.gz
