@@ -40,7 +40,7 @@ color_string
 echo -e "${GREY}Начало установки ${YELLOW}PROCS completions${NOFORMAT}"
 color_string
 
-if [[ -f "${DEST_BASH_COMPLETION}procs.bash" ]];then
+if [[ -f "${DEST_BASH_COMPLETION}/procs.bash" ]];then
   echo -e "${GREEN}Упсик,а файлик ${ORANGE}/etc/bash_completion.d/procs.bash${GREEN} - уже существует${NOFORMAT}"
 else 
   if wget --quiet --spider "${PROCS_COMPL}"; then
