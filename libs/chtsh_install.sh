@@ -5,7 +5,6 @@
 #############################################################################################################
 function ctsh_install {
 clear  
-#TMP_FOLDER="/tmp/chts" && mkdir -p "${TMP_FOLDER}"
 
 ###### main script block
 color_string
@@ -34,17 +33,17 @@ echo
 color_string
 echo -e "${GREY}Начало установки ${YELLOW}CHT.SH completion${NOFORMAT}"
 color_string
-if [[ -f "${DEST_BASH_COMPLETION}"/chtsh.sh ]];then
-  echo -e "${GREEN}Упсик,а файлик ${ORANGE}chtsh.sh(completion)${GREEN} - уже существует ${NOFORMAT}"
+if [[ -f "${DEST_BASH_COMPLETION}"/chtsh.sh ]] || [[ -f "${DEST_BASH_COMPLETION}"/chtsh.bash ]];then
+  echo -e "${GREEN}Упсик,а файлик ${ORANGE}chtsh.sh/chtsh.bash(completion)${GREEN} - уже существует ${NOFORMAT}"
 else 
   if wget --quiet --spider "${CHT_COMPL}";then
-    echo -e "${GREEN}файлик ${ORANGE}chtsh.sh(completion)${GREEN} доступен для загрузки${NOFORMAT}"
+    echo -e "${GREEN}файлик ${ORANGE}chtsh(completion)${GREEN} доступен для загрузки${NOFORMAT}"
     wget --quiet "${CHT_COMPL}" --directory-prefix="${DEST_BASH_COMPLETION}"
-    echo -e "${GREEN}Файл ${ORANGE}chtsh.sh${GREEN} загружен в папку: ${ORANGE}${DEST_BASH_COMPLETION}${NOFORMAT}" &&\
+    echo -e "${GREEN}Файл ${ORANGE}chtsh.bash${GREEN} загружен в папку: ${ORANGE}${DEST_BASH_COMPLETION}${NOFORMAT}" &&\
       log "Файл chtsh.sh загружен"    
   else
-    echo -e "${GREY}файлик cht.sh completion ${RED}НЕдоступен${GREY} для загрузки${NOFORMAT}"&&\
-      err "файлик cht.sh completion НЕ доступен для загрузки" 
+    echo -e "${GREY}файлик chtsh.bash completion ${RED}НЕдоступен${GREY} для загрузки${NOFORMAT}"&&\
+      err "файлик chtsh.bash completion НЕ доступен для загрузки" 
   fi
 fi
 color_string

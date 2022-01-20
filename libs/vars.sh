@@ -29,7 +29,7 @@ DEST_BASH_COMPLETION="/etc/bash_completion.d"
 GITHUB_PATH="https://raw.githubusercontent.com/rubtsove/dotfiles2/master/sources"
 
 CHT_SOURCE="${GITHUB_PATH}/.config/cht.sh/cht.sh"
-CHT_COMPL="${GITHUB_PATH}/.config/cht.sh/chtsh.sh"
+CHT_COMPL="${GITHUB_PATH}/.config/cht.sh/chtsh.bash"
 
 SSS_SOURCE="${GITHUB_PATH}/.config/sss"
 

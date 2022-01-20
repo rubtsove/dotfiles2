@@ -5,7 +5,6 @@
 #############################################################################################################
 function sss_install {
 clear
-#TMP_FOLDER="/tmp/sss" && mkdir -p "${TMP_FOLDER}"
 
 color_string
 echo -e "${GREY}Начало установки ${YELLOW}SSS${NOFORMAT}"
