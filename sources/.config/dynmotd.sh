@@ -1,6 +1,5 @@
 #!/bin/bash
 clear
-# set -e - оказывается нельзя такое в стартап скриптах - ломается bash-completion - при нажатии TAB всё закрывается ssh сеанс
 ################ Начало блока переменных
 #OS version
 OS_VER="$(hostnamectl |grep -i "operating"|awk '{print tolower($3)}')"
@@ -62,12 +61,12 @@ repeat () {
 echo
 }
 
+###Main block
 repeat "-"
 echo -ne "${GREY}Системная информация на: ${NOFORMAT} ${RED}${DATEN}${NOFORMAT}\n"
 echo -ne "${GREY}Аптайм Дней: ${NOFORMAT} ${RED}$upDays ${NOFORMAT} ${GREY}Часов: ${NOFORMAT} ${RED}$upHours ${NOFORMAT} ${GREY}Минут: ${RED}$upMins \n"
 repeat "-"
 echo -ne "${GREY}Количество ядер процессора: ${NOFORMAT} ${RED}$(cat /proc/cpuinfo | grep "^processor" |wc -l)${NOFORMAT}\n"
-#echo -ne "${GREY}Всего ОЗУ: ${NOFORMAT}${RED}$(free -m | grep -oP '\d+' | head -n 1)${NOFORMAT} Mb\n"
 echo -ne "${GREY}Всего ОЗУ: ${NOFORMAT}${RED}$(cat /proc/meminfo |grep -i memtotal|awk '{print int($2/1000000+0.5)}')${NOFORMAT} ${GREY}GB\n"
 repeat "-"
 echo -ne "${GREY}System Load 1m: ${NOFORMAT}${RED}$LOAD1${NOFORMAT}\t ${GREY}System Load 5m: ${NOFORMAT} ${RED}$LOAD5\t${NOFORMAT} ${GREY}System Load 15m: ${NOFORMAT} ${RED}$LOAD15${NOFORMAT}\n"
