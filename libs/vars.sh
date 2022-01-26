@@ -1,8 +1,8 @@
 
 
 # Системные переменные
-APT_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,git,unzip"
-YUM_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,mtr,git,unzip"
+APT_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,git,unzip,net-tools"
+YUM_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,mtr,git,unzip,net-tools"
 OS_VER="$(hostnamectl |grep -i "operating"|awk '{print tolower($3)}')"
 Field_Separator="$IFS"
 
@@ -30,6 +30,9 @@ GITHUB_PATH="https://raw.githubusercontent.com/rubtsove/dotfiles2/master/sources
 
 CHT_SOURCE="${GITHUB_PATH}/.config/cht.sh/cht.sh"
 CHT_COMPL="${GITHUB_PATH}/.config/cht.sh/chtsh.bash"
+
+CHEAT_SOURCE="https://github.com/cheat/cheat/releases/download/4.2.3/cheat-linux-amd64.gz"
+CHEAT_COMPL="${GITHUB_PATH}/.config/cheat/cheat.bash"
 
 SSS_SOURCE="${GITHUB_PATH}/.config/sss"
 
