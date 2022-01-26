@@ -1,7 +1,7 @@
 
 
 #############################################################################################################
-### Функция установки cht.sh
+### Функция установки cheat
 #############################################################################################################
 function cheat_install {
 clear  
@@ -16,7 +16,7 @@ if [[ -f $(which cheat) ]];then
 else
   if wget --quiet --spider "${CHEAT_SOURCE}" ;then 
     echo -e "${GREEN}Файл ${ORANGE}CHEAT${GREEN} доступен для загрузки ${NOFORMAT}"
-    wget --quiet "${HEAT_SOURCE}" --output-document="${TMP_FOLDER}"/cheat.gz &&\
+    wget --quiet "${CHEAT_SOURCE}" --output-document="${TMP_FOLDER}"/cheat.gz &&\
     gzip --decompress --quiet "${TMP_FOLDER}"/cheat.gz 
     cp -rfv "${TMP_FOLDER}"/cheat "${DEST_LOCALBIN}" && chmod +x "${DEST_LOCALBIN}"/cheat
     rm -rf "${TMP_FOLDER}" && echo -e "${GREY}инсталяционный файл CHEAT удалён${NOFORMAT}"
@@ -42,7 +42,7 @@ if [[ -f "${DEST_BASH_COMPLETION}"/cheat.bash ]];then
 else 
   if wget --quiet --spider "${CHEAT_COMPL}";then
     echo -e "${GREEN}файлик ${ORANGE}cheat.bash(completion)${GREEN} доступен для загрузки${NOFORMAT}"
-    wget --quiet "${CHT_COMPL}" --directory-prefix="${DEST_BASH_COMPLETION}"
+    wget --quiet "${CHEAT_COMPL}" --directory-prefix="${DEST_BASH_COMPLETION}"
     echo -e "${GREEN}Файл ${ORANGE}cheat.bash${GREEN} загружен в папку: ${ORANGE}${DEST_BASH_COMPLETION}${NOFORMAT}" &&\
       log "Файл chtsh.sh загружен"    
   else
