@@ -1,18 +1,8 @@
 ### custom exports ###
-# vim становиться редактором по-умолчанию
 export EDITOR="/usr/bin/vim" # редактор по-молчанию - VIM
-
-### custom path
-# добавил такой путь как минимум для Cenots7
-# для того что бы корректно определял пути к grc/procs/cht.sh
-# значение переменной $OS_VER беру из файла dynmotd.sh
-
-export PATH=$PATH:/usr/local/bin/
-
-#OS_VER="$(hostnamectl |grep -i "operating"|awk '{print tolower($3)}')"
-#if [[ "${OS_VER}" == "centos" ]] ; then
-#export PATH=$PATH:/usr/local/bin/
-#fi
+export PATH=$PATH:/usr/local/bin/ # все бинарники складываю в эту папку
+export CHEAT_CONFIG_PATH="~/.dotfiles/cheat/conf.yml" # настройка по умолчанию для программы cheat
+export CHEAT_USE_FZF=true # совместимость с FZF
 
 ### aliases ###
 if [ -f "$HOME"/.bash_aliases ]; then
