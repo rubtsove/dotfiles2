@@ -1,8 +1,8 @@
 
 
 # Системные переменные
-APT_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,git,unzip,net-tools"
-YUM_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,mtr,git,unzip,net-tools"
+APT_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,git,unzip,iproute2,bash-completion"
+YUM_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,mtr,git,unzip,NetworkManager-tui,bash-completion"
 OS_VER="$(hostnamectl |grep -i "operating"|awk '{print tolower($3)}')"
 Field_Separator="$IFS"
 
