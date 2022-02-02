@@ -38,7 +38,7 @@ processes="$(ps aux | wc -l)"
 INTERFACE="$(ip -4 ad | grep 'state UP' | awk -F ":" '!/^[0-9]*: ?lo/ {print $2}')"
 
 #Services
-firewall_services="firewalld.service,iptables.service,nftables.service"
+FIREWALL="firewalld,iptables,nftables"
 
 Field_Separator="$IFS"
 ################ Конец блока переменных
@@ -87,13 +87,12 @@ echo -ne "${GREY}Файловые системы: ${NOFORMAT}\n"
 echo -ne "${GREY}$(df -Th | grep -vE "tmpfs|overlay|squashfs")${NOFORMAT}\n"
 repeat "-"
 IFS=","
-for svc in "$firewall_services"
-do
-    if [[  $(systemctl is-active $svc) == "active" ]] ;then
-        echo -ne "${GREY}Сервисы Firewall (iptable/firewalld/nfttables) $svc: ${NOFORMAT}${RED}ACTIVE${NOFORMAT}\n"
-    else
-        echo -ne "${GREY}Сервисов Firewall (iptable/firewalld/nfttables): ${NOFORMAT}${RED}не найдено${NOFORMAT}\n"
-    fi
+for SVC in ${FIREWALL};do
+  if [[ $(systemctl is-active "${SVC}") == "active" ]] ;then
+    echo -ne "${GREY}Сервис ${CYAN}${SVC}: ${RED}ACTIVE${NOFORMAT}\n"
+  else
+    echo -ne "${GREY}Сервиса ${CYAN}${SVC}: ${GREEN}не найдено${NOFORMAT}\n"
+  fi
 done
 IFS="$Field_Separator"
 echo 
@@ -108,4 +107,4 @@ fi
 unset BLACK RED GREEN YELLOW BLUE MAGENTA CYAN GREY PURPLE ORANGE DATEN\
  LOAD1 LOAD5 LOAD15 uptime upDays upHours upMins upSecs root_usage\
  fsperm memory_usage swap_usage users USER processes INTERFACE \
- firewall_services svc
+ FIREWALL SVC
