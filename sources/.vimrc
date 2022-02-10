@@ -1,8 +1,8 @@
-let g:netrw_banner = 0 " Hide banner
-let g:netrw_liststyle = 3 " There are four different view types: thin, long, wide and tree
-let g:netrw_browse_split = 4 " open in previous window
-let g:netrw_altv = 1
-let g:netrw_winsize = 25 " The width of the directory - sets the width to 25% of the page
+"let g:netrw_banner = 0 " Hide banner
+"let g:netrw_liststyle = 3 " There are four different view types: thin, long, wide and tree
+"let g:netrw_browse_split = 4 " open in previous window
+"let g:netrw_altv = 1
+"let g:netrw_winsize = 25 " The width of the directory - sets the width to 25% of the page
 "augroup ProjectDrawer
 "  autocmd!
 "  autocmd VimEnter * :Vexplore " opens netrw in a vertical split
@@ -36,8 +36,8 @@ set expandtab           " в режиме вставки заменяет сим
 set tabstop=4           " количество пробелов, которыми символ табуляции отображается в тексте
 set softtabstop=4       " количество пробелов, которыми символ табуляции отображается при добавлении
 
-set autoindent          " копирует отступы с текущей строки при добавлении новой
-set smartindent         " делает то же, что и autoindent плюс автоматически выставляет отступы в «нужных» местах ( типа{ )
+"set autoindent          " копирует отступы с текущей строки при добавлении новой
+"set smartindent         " делает то же, что и autoindent плюс автоматически выставляет отступы в «нужных» местах ( типа{ )
 
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
