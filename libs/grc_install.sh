@@ -45,7 +45,7 @@ else
       err "Архив с установщиком GRC - НЕдоступен для загрузки" 
   fi
 fi
-
+rm -rf "${TMP_FOLDER}"
 color_string
 echo -e "${GREY}Конец установки ${YELLOW}GRC${NOFORMAT}"
 color_string

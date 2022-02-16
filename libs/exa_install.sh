@@ -33,6 +33,7 @@ else
       err "Инсталляционный архив EXA НЕдоступен для загрузки"
   fi
 fi
+rm -rf "${TMP_FOLDER}"
 color_string
 echo -e "${GREY}Конец установки ${YELLOW}EXA${NOFORMAT}"
 color_string

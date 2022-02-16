@@ -32,6 +32,7 @@ else
       err "Архив BAT НЕДОСТУПЕН для загрузки" 
   fi
 fi
+rm -rf "${TMP_FOLDER}"
 color_string
 echo -e "${GREY}Конец установки ${YELLOW}BAT${NOFORMAT}"
 color_string

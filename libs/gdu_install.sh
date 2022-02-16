@@ -19,12 +19,13 @@ else
     cp -rfv "${TMP_FOLDER}"/gdu "${DEST_LOCALBIN}" && chmod +x "${DEST_LOCALBIN}"/gdu
 	  echo -e "${GREEN}Файл ${ORANGE}GDU${GREEN} скопирован в папку: ${ORANGE}$(which gdu)${NOFORMAT}" &&\
       log "Бинарный файл GDU скопирован загружен"
-    rm -rf "${TMP_FOLDER}" && echo -e "${GREEN}Архив ${ORANGE}GDU${GREEN} удалён${NOFORMAT}"
+    rm -rf "${TMP_FOLDER}" && echo -e "${GREEN}Архив ${ORANGE}GDU : ${TMP_FOLDER} ${GREEN} удалён${NOFORMAT}"
   else
     echo -e "${GREY}Архив GDU ${RED}НЕдоступен${GREY} для загрузки${NOFORMAT}"&&\
       err "Архив GDU НЕДОСТУПЕН для загрузки" 
   fi
 fi
+rm -rf "${TMP_FOLDER}"
 color_string
 echo -e "${GREY}Конец установки ${YELLOW}GDU${NOFORMAT}"
 color_string

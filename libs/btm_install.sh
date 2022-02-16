@@ -29,6 +29,7 @@ else
       err "Инсталляционный архив BotTom НЕДОСТУПЕН для загрузки" 
   fi
 fi
+rm -rf "${TMP_FOLDER}"
 color_string
 echo -e "${GREY}Конец установки ${YELLOW}BTM${NOFORMAT}"
 color_string

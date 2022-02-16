@@ -50,6 +50,7 @@ else
       err "файлик cheat.bash completion НЕ доступен для загрузки" 
   fi
 fi
+rm -rf "${TMP_FOLDER}"
 color_string
 echo -e "${GREY}Конец установки ${YELLOW}CHEAT completion${NOFORMAT}"
 color_string

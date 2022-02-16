@@ -53,6 +53,7 @@ else
       err "файл procs.bash НЕ доступен для загрузки"
   fi
 fi
+rm -rf "${TMP_FOLDER}"
 color_string
 echo -e "${GREY}Конец установки ${YELLOW}PROCS completions${NOFORMAT}"
 color_string
