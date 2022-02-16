@@ -19,7 +19,7 @@ else
     wget --quiet "${FDFIND_SOURCE}" --directory-prefix="${TMP_FOLDER}"
     tar -xvf "${TMP_FOLDER}"/fd*.tar.gz -C "${TMP_FOLDER}" && rm "${TMP_FOLDER}"/fd*.tar.gz
     mv "${TMP_FOLDER}"/fd*/ "${TMP_FOLDER}"/fdfind/
-    cp -rfv "${TMP_FOLDER}"/fdfind/fd "${DEST_LOCALBIN}" && chmod +x "${DEST_LOCALBIN}"/fd
+    cp -rfv "${TMP_FOLDER}"/fdfind/fd "${DEST_LOCALBIN}"/fdfind && chmod +x "${DEST_LOCALBIN}"/fdfind
 	  echo -e "${GREEN}Файл ${ORANGE}FDFIND${GREEN} скопирован в папку: ${ORANGE}$(which fd)${NOFORMAT}" &&\
       log "Бинарный файл fdfind скопирован загружен"
   else
