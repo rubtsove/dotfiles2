@@ -32,7 +32,7 @@ else
       rpm -ivh "${TMP_FOLDER}"/*.rpm
       echo -e "DUF${GREEN} установлен в папку: ${ORANGE}$(which duf)${NOFORMAT}" &&\
         log "DUF.rpm успешно установлен" 
-      rm -rf "${TMP_FOLDER}" && echo -e "${GREY}инсталяционный файл ${ORANGE}DUF.rpm${GREY} удалён${NOFORMAT}"
+      rm -rf "${TMP_FOLDER}" && echo -e "${GREY}инсталяционный файл ${ORANGE}DUF: ${TMP_FOLDER}${GREY} удалён${NOFORMAT}"
     else
       echo -e "${GREY}Файлик duf.rpm ${RED}НЕдоступен${GREY} для загрузки${NOFORMAT}" &&\
        err "Файлик duf.rpm НЕДОСТУПЕН для загрузки" 

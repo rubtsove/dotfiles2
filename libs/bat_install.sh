@@ -26,7 +26,7 @@ else
     cp -rfv "${TMP_FOLDER}"/autocomplete/bat.bash "${DEST_BASH_COMPLETION}"
 	  echo -e "${GREEN}Файл ${ORANGE}bat.bash${GREEN} скопирован в папку ${ORANGE}/etc/bash_completion.d/${NOFORMAT}" &&\
       log "Файл bat.bash скопирован в папку /etc/bash_completion.d/"
-    rm -rf "${TMP_FOLDER}" && echo -e "${GREEN}Архив ${ORANGE}BAT${GREEN} удалён${NOFORMAT}"
+    rm -rf "${TMP_FOLDER}" && echo -e "${GREEN}Архив ${ORANGE}BAT: ${TMP_FOLDER}${GREEN} удалён${NOFORMAT}"
   else
     echo -e "${GREY}Архив BAT ${RED}НЕдоступен${GREY} для загрузки${NOFORMAT}"&&\
       err "Архив BAT НЕДОСТУПЕН для загрузки" 

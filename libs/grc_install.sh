@@ -37,7 +37,7 @@ else
     cp -rfv "${TMP_FOLDER}"/grc-master/grcat.1 /usr/share/man/man1
     echo -e "${GREEN}Файл ${ORANGE}grcat.1${GREEN} скопирован в папку ${ORANGE}/usr/share/man/man1${NOFORMAT}" &&\
       log "Файл exa скопирован"
-    rm -rf "${TMP_FOLDER}" && echo -e "${GREEN}инсталяционный архив ${ORANGE}GRC${GREEN} - удалён${NOFORMAT}"
+    rm -rf "${TMP_FOLDER}" && echo -e "${GREEN}инсталяционный архив ${ORANGE}GRC: ${TMP_FOLDER}${GREEN} - удалён${NOFORMAT}"
     echo -e "${GREEN}ресурсы GRC скопированы${NOFORMAT}" &&\
       log "ресурсы GRC скопированы" 
   else

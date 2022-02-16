@@ -27,7 +27,7 @@ else
     cp -rfv "${TMP_FOLDER}"/completions/exa.bash "${DEST_BASH_COMPLETION}" &&\
     echo -e "${GREEN}Файл ${ORANGE}exa.bash (completion)${GREEN} скопирован в папку: ${ORANGE}/etc/bash_completion.d/${NOFORMAT}" &&\
       log "Файл exa.bash (completion) скопирован" 
-    rm -rf "${TMP_FOLDER}" && echo -e "${GREEN}инсталяционный архив ${ORANGE}EXA${GREEN} удалён${NOFORMAT}"
+    rm -rf "${TMP_FOLDER}" && echo -e "${GREEN}инсталяционный архив ${ORANGE}EXA: ${TMP_FOLDER}${GREEN} удалён${NOFORMAT}"
   else
     echo -e "${GREY}Инсталляционный архив EXA ${RED}НЕдоступен${GREY} для загрузки${NOFORMAT}" &&\
       err "Инсталляционный архив EXA НЕдоступен для загрузки"

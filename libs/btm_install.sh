@@ -23,7 +23,7 @@ else
     cp -rfv "${TMP_FOLDER}"/completion/btm.bash "${DEST_BASH_COMPLETION}"
 	  echo -e "${GREEN}Файл ${ORANGE}btm.bash${GREEN} скопирован в папку ${ORANGE}/etc/bash_completion.d/${NOFORMAT}" &&\
       log "Файл btm.bash скопирован в папку /etc/bash_completion.d/"
-    rm -rf "${TMP_FOLDER}" && echo -e "${GREEN}инсталяционный архив ${ORANGE}BotTom${GREEN} удалён${NOFORMAT}"
+    rm -rf "${TMP_FOLDER}" && echo -e "${GREEN}инсталяционный архив ${ORANGE}BotTom: ${TMP_FOLDER}${GREEN} удалён${NOFORMAT}"
   else
     echo -e "${GREY}Инсталляционный архив BotTom ${RED}НЕдоступен${GREY} для загрузки${NOFORMAT}"&&\
       err "Инсталляционный архив BotTom НЕДОСТУПЕН для загрузки" 
