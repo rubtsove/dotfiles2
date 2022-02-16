@@ -16,7 +16,7 @@ if [[ -f $(which rg) ]];then
 else
   if wget --quiet --spider "${RIPGREP_SOURCE}"; then
     echo -e "${GREY}Архив ${ORANGE}ripgrep${GREY} ДОСТУПЕН для загрузки${NOFORMAT}"
-    wget --quiet "${ripgrep_SOURCE}" --directory-prefix="${TMP_FOLDER}"
+    wget --quiet "${RIPGREP_SOURCE}" --directory-prefix="${TMP_FOLDER}"
     tar -xvf "${TMP_FOLDER}"/rip*.tar.gz -C "${TMP_FOLDER}" && rm "${TMP_FOLDER}"/rip*.tar.gz
     mv "${TMP_FOLDER}"/rip*/ "${TMP_FOLDER}"/ripgrep/
     cp -rfv "${TMP_FOLDER}"/ripgrep/rg "${DEST_LOCALBIN}" && chmod +x "${DEST_LOCALBIN}"/rg
