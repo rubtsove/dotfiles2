@@ -58,4 +58,7 @@ else
   fi
 fi
 rm -rf "${TMP_FOLDER}"
+color_string
+echo -e "${GREY}Конец установки ${YELLOW}FDFIND completions${NOFORMAT}"
+color_string
 }
