@@ -11,8 +11,8 @@ echo -e "${GREY}Начало установки бинарника ${YELLOW}FDFI
 color_string
 TMP_FOLDER="/tmp/fdfind" && mkdir -p "${TMP_FOLDER}"
 
-if [[ -f $(which fd) ]];then
-  echo -e "${GREEN}Упсик,а файлик ${ORANGE}FDFIND${GREEN} - уже существует в папке: ${ORANGE}$(which fd)${NOFORMAT}"
+if [[ -f $(which fdfind) ]];then
+  echo -e "${GREEN}Упсик,а файлик ${ORANGE}FDFIND${GREEN} - уже существует в папке: ${ORANGE}$(which fdfind)${NOFORMAT}"
 else
   if wget --quiet --spider "${FDFIND_SOURCE}"; then
     echo -e "${GREY}Архив ${ORANGE}FDFIND${GREY} ДОСТУПЕН для загрузки${NOFORMAT}"
@@ -20,7 +20,7 @@ else
     tar -xvf "${TMP_FOLDER}"/fd*.tar.gz -C "${TMP_FOLDER}" && rm "${TMP_FOLDER}"/fd*.tar.gz
     mv "${TMP_FOLDER}"/fd*/ "${TMP_FOLDER}"/fdfind/
     cp -rfv "${TMP_FOLDER}"/fdfind/fd "${DEST_LOCALBIN}"/fdfind && chmod +x "${DEST_LOCALBIN}"/fdfind
-	  echo -e "${GREEN}Файл ${ORANGE}FDFIND${GREEN} скопирован в папку: ${ORANGE}$(which fd)${NOFORMAT}" &&\
+	  echo -e "${GREEN}Файл ${ORANGE}FDFIND${GREEN} скопирован в папку: ${ORANGE}$(which fdfind)${NOFORMAT}" &&\
       log "Бинарный файл fdfind скопирован загружен"
   else
     echo -e "${GREY}Архив fdfind ${RED}НЕдоступен${GREY} для загрузки${NOFORMAT}"&&\
