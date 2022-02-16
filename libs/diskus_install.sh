@@ -29,6 +29,7 @@ else
       err "Файлик DISKUS НЕДОСТУПЕН для загрузки" 
   fi
 fi
+rm -rf "${TMP_FOLDER}"
 color_string
 echo -e "${GREY}Конец установки ${YELLOW}DISKUS${NOFORMAT}"
 color_string

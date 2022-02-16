@@ -8,7 +8,7 @@ echo -e "${GREY}Начало установки ${YELLOW}GDU${NOFORMAT}"
 color_string
 TMP_FOLDER="/tmp/GDU" && mkdir -p "${TMP_FOLDER}"
 
-if [[ -f $(which GDU) ]] ;then
+if [[ -f $(which gdu) ]] ;then
   echo -e "${GREEN}Упсик,а файлик ${ORANGE}GDU${GREEN} - уже существует в: $(which gdu)${NOFORMAT}"
 else
   if wget --quiet --spider "${GDU_SOURCE}"; then
