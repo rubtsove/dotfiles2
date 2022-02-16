@@ -31,6 +31,8 @@ color_string
 echo -e "${GREY}Конец установки ${YELLOW}FDFIND${NOFORMAT}"
 color_string
 
+echo
+
 #####completion
 color_string
 echo -e "${GREY}Начало установки ${YELLOW}FDFIND completions${NOFORMAT}"

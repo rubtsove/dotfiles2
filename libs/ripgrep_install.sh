@@ -31,6 +31,8 @@ color_string
 echo -e "${GREY}Конец установки ${YELLOW}ripgrep${NOFORMAT}"
 color_string
 
+echo
+
 #####completion
 color_string
 echo -e "${GREY}Начало установки ${YELLOW}ripgrep completions${NOFORMAT}"
@@ -57,4 +59,3 @@ else
 fi
 rm -rf "${TMP_FOLDER}"
 }
-/usr/share/man/man1
