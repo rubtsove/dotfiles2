@@ -12,7 +12,7 @@ while true; do
   echo -e "${GREY}нажми ${CYAN}1${GREY} - для установки обновлений"
   echo -e "${GREY}нажми ${CYAN}2${GREY} - для установки пакетов"
   echo -e "${GREY}нажми ${CYAN}3${GREY} - (лайт решение) - для установки cht.sh + cheat + duf + sss + procs + grc + dynmotd "
-  echo -e "${GREY}нажми ${CYAN}4${GREY} - для установки cht.sh + dheat + duf + sss + procs + grc + dynmotd + exa + btm + bat"
+  echo -e "${GREY}нажми ${CYAN}4${GREY} - для установки cht.sh + cheat + duf + sss + procs + grc + dynmotd + exa + btm + bat + gdu"
   echo -e "${GREY}нажми ${CYAN}5${GREY} - для проверки наличия старых doftiles"
   echo -e "${GREY}нажми ${CYAN}6${GREY} - для удаления старых dotfiles"
   echo -e "${GREY}нажми ${CYAN}7${GREY} - для копрования dotfiles"
@@ -30,7 +30,7 @@ while true; do
      anykey && procs_install && anykey && grc_install && anykey && dynmotd_install && anykey;;
     4) ctsh_install && anykey && cheat_install && anykey && duf_install && anykey && exa_install &&\
      anykey && sss_install && anykey && procs_install && anykey && grc_install && anykey && btm_install &&\
-      anykey && dynmotd_install && anykey && bat_install && anykey;;
+      anykey && dynmotd_install && anykey && bat_install && anykey && gdu_install && anykey && ds_install && anykey;;
     5) check_dotfiles_exsist && anykey;;
     6) delete_dotfiles && anykey ;;
     7) copy_dotfiles && anykey && source_bashrc && anykey;;

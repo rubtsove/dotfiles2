@@ -1,8 +1,8 @@
 
 
 # Системные переменные
-APT_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,git,unzip,iproute2,bash-completion"
-YUM_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,mtr,git,unzip,NetworkManager-tui,bash-completion"
+APT_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,git,unzip,iproute2,bash-completion,fd-find"
+YUM_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,mtr,git,unzip,NetworkManager-tui,bash-completion,fd-find"
 OS_VER="$(hostnamectl |grep -i "operating"|awk '{print tolower($3)}')"
 Field_Separator="$IFS"
 
@@ -57,3 +57,7 @@ BAT_SOURCE="https://github.com/sharkdp/bat/releases/download/v0.19.0/bat-v0.19.0
 
 FZF_SOURCE="https://github.com/junegunn/fzf.git"
 FZF_DIR="$HOME/.fzf"
+
+GDU_SOURCE="https://github.com/dundee/gdu/releases/download/v5.13.1/gdu_linux_amd64.tgz"
+
+DS_SOURCE="${GITHUB_PATH}/bins/ds"
