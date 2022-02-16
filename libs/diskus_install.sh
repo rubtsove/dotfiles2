@@ -23,6 +23,9 @@ else
     cp -rfv "${TMP_FOLDER}"/diskus/diskus "${DEST_LOCALBIN}" && chmod +x "${DEST_LOCALBIN}"/diskus
 	  echo -e "${GREEN}Файл ${ORANGE}DISKUS${GREEN} скопирован в папку: ${ORANGE}$(which diskus)${NOFORMAT}" &&\
       log "Бинарный файл DISKUS скопирован загружен"
+    cp -rfv "${TMP_FOLDER}"/diskus/diskus.1 /usr/share/man/man1/
+    echo -e "${GREEN}MAN Файл ${ORANGE}diskus.1${GREEN} скопирован в папку: ${ORANGE}/usr/share/man/man1/${NOFORMAT}" &&\
+      log "Бинарный файл DISKUS скопирован загружен"
     rm -rf "${TMP_FOLDER}" && echo -e "${GREEN}Архив ${ORANGE}DISKUS: ${TMP_FOLDER}${GREEN} удалён${NOFORMAT}"
   else
     echo -e "${GREY}Архив DISKUS ${RED}НЕдоступен${GREY} для загрузки${NOFORMAT}"&&\
