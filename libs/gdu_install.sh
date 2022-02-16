@@ -17,7 +17,7 @@ else
     tar -xvf "${TMP_FOLDER}"/gdu_linux_amd64.tgz -C "${TMP_FOLDER}"
     mv "${TMP_FOLDER}"/gdu_linux_amd64 "${TMP_FOLDER}"/gdu
     cp -rfv "${TMP_FOLDER}"/gdu "${DEST_LOCALBIN}" && chmod +x "${DEST_LOCALBIN}"/gdu
-	echo -e "${GREEN}Файл ${ORANGE}GDU${GREEN} скопирован в папку: ${ORANGE}$(which gdu)${NOFORMAT}" &&\
+	  echo -e "${GREEN}Файл ${ORANGE}GDU${GREEN} скопирован в папку: ${ORANGE}$(which gdu)${NOFORMAT}" &&\
       log "Бинарный файл GDU скопирован загружен"
     rm -rf "${TMP_FOLDER}" && echo -e "${GREEN}Архив ${ORANGE}GDU${GREEN} удалён${NOFORMAT}"
   else

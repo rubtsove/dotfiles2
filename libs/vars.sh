@@ -60,4 +60,6 @@ FZF_DIR="$HOME/.fzf"
 
 GDU_SOURCE="https://github.com/dundee/gdu/releases/download/v5.13.1/gdu_linux_amd64.tgz"
 
+DISKUS_SOURCE="https://github.com/sharkdp/diskus/releases/download/v0.7.0/diskus-v0.7.0-x86_64-unknown-linux-musl.tar.gz"
+
 DS_SOURCE="${GITHUB_PATH}/bins/ds"
