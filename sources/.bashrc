@@ -52,7 +52,7 @@ else
 fi
 
 ### FZF show hidden filesvim 
-export FZF_DEFAULT_COMMAND="fd --type f"
+export FZF_DEFAULT_COMMAND="find -L"
 
 ### FZF systemctl
 if [[ -f "$HOME"/.fuzzy-sys.plugin.sh ]];then
