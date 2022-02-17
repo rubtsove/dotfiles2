@@ -51,8 +51,8 @@ else
   export PS1='\n\e[1;32m[\u\e[m@\e[1;32m\h]\e[m \e[1;33m\A\e[m \e[1;36m[\w]\e[m \$ '
 fi
 
-### FZF show hidden filesvim ~
-export FZF_DEFAULT_COMMAND="find -L"
+### FZF show hidden filesvim 
+export FZF_DEFAULT_COMMAND="fd --type f"
 
 ### FZF systemctl
 if [[ -f "$HOME"/.fuzzy-sys.plugin.sh ]];then
@@ -61,5 +61,5 @@ fi
 
 ### FZF keybindings
 if [[ -f "$HOME"/.config/fzf/key-bindings.bash ]];then
-  . $HOME"/.config/fzf/key-bindings.bash
+  . "$HOME"/.config/fzf/key-bindings.bash
 fi

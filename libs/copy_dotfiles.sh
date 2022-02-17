@@ -106,9 +106,9 @@ else
   if wget --quiet --spider "${FZF_KEYS_SOURCE}"; then
     echo -e "${GREEN}файл ${ORANGE}fzfkey-bindings.bash${GREEN} доступен для загрузки${NOFORMAT}"
     wget --quiet "${FZF_KEYS_SOURCE}" --directory-prefix "$HOME"/.config/fzf/ &&\
-      echo -e "${GREEN}Конфигурационный файл ${ORANGE}fzfkey-bindings.bash${GREEN} скопирован в папку: ${ORANGE}$HOME/.config/fzf/${NOFORMAT}"
+      echo -e "${GREEN}Конфигурационный файл ${ORANGE}key-bindings.bash${GREEN} скопирован в папку: ${ORANGE}$HOME/.config/fzf/${NOFORMAT}"
   else
-    echo -e "${GREY}файл ${ORANGE}fzfkey-bindings.bash${GREY} НЕ доступен для загрузки${NOFORMAT}"
+    echo -e "${GREY}файл ${ORANGE}key-bindings.bash${GREY} НЕ доступен для загрузки${NOFORMAT}"
   fi
 fi
 
