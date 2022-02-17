@@ -47,10 +47,10 @@ else
     tar -xvf "${TMP_FOLDER}"/fd*.tar.gz -C "${TMP_FOLDER}" && rm "${TMP_FOLDER}"/fd*.tar.gz
     mv "${TMP_FOLDER}"/fd*/ "${TMP_FOLDER}"/fdfind/
     cp -rfv "${TMP_FOLDER}"/fdfind/autocomplete/fd.bash "${DEST_BASH_COMPLETION}"
-	  echo -e "${GREEN}Файл ${ORANGE}fd.bash${GREEN} скопирован в папку: /etc/bash_completion.d/" &&\
+	  echo -e "${GREEN}Файл ${ORANGE}fd.bash${GREEN} скопирован в папку: ${DEST_BASH_COMPLETION}" &&\
       log "Конфигурационный файл fd.bash скопирован в /etc/bash_completion.d/" 
-    cp -rfv "${TMP_FOLDER}"/fdfind/fd.1 /usr/share/man/man1
-	  echo -e "${GREEN}MAN Файл ${ORANGE}rg.1${GREEN} скопирован в папку: /usr/share/man/man1/" &&\
+    cp -rfv "${TMP_FOLDER}"/fdfind/fd.1 ${DEST_MAN}
+	  echo -e "${GREEN}MAN Файл ${ORANGE}rg.1${GREEN} скопирован в папку: ${DEST_MAN}" &&\
       log "MAN файл fd.1 скопирован в /usr/share/man/man1"
   else
     echo -e "${GREY}Архив fdfind ${RED}НЕдоступен${GREY} для загрузки${NOFORMAT}"&&\

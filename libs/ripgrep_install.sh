@@ -49,8 +49,8 @@ else
     cp -rfv "${TMP_FOLDER}"/ripgrep/complete/rg.bash "${DEST_BASH_COMPLETION}"
 	  echo -e "${GREEN}Файл ${ORANGE}rg.bash${GREEN} скопирован в папку: /etc/bash_completion.d/" &&\
       log "Конфигурационный файл eg.bash скопирован в /etc/bash_completion.d/" 
-    cp -rfv "${TMP_FOLDER}"/ripgrep/doc/rg.1 /usr/share/man/man1
-	  echo -e "${GREEN}MAN Файл ${ORANGE}rg.1${GREEN} скопирован в папку: /usr/share/man/man1/" &&\
+    cp -rfv "${TMP_FOLDER}"/ripgrep/doc/rg.1 ${DEST_MAN}
+	  echo -e "${GREEN}MAN Файл ${ORANGE}rg.1${GREEN} скопирован в папку: ${DEST_MAN}" &&\
       log "MAN файл rg.1 скопирован в /usr/share/man/man1"
   else
     echo -e "${GREY}Архив ripgrep ${RED}НЕдоступен${GREY} для загрузки${NOFORMAT}"&&\

@@ -52,12 +52,12 @@ echo -e "${GREY}Начало копирования конфига ${YELLOW}proc
 color_string
 
 if [[ -f "$HOME/.config/procs/config.toml" ]];then
-  echo -e "${GREEN}Упсик,а файлик ${ORANGE}~/.config/procs/config.toml${GREEN} - уже существует${NOFORMAT}"
+  echo -e "${GREEN}Упсик,а файлик ${ORANGE}$HOME/.config/procs/config.toml${GREEN} - уже существует${NOFORMAT}"
 else 
   if wget --quiet --spider "${PROCS_CONFIG}"; then
     echo -e "${GREEN}файл ${ORANGE}config.toml${GREEN} доступен для загрузки${NOFORMAT}"
     wget --quiet "${PROCS_CONFIG}" --directory-prefix="$HOME"/.config/procs/ &&\
-      echo -e "${GREEN}Конфигурационный файл ${ORANGE}config.toml${GREEN} скопирован в папку: ${ORANGE}~/.config/procs/${NOFORMAT}"
+      echo -e "${GREEN}Конфигурационный файл ${ORANGE}config.toml${GREEN} скопирован в папку: ${ORANGE}$HOME/.config/procs/${NOFORMAT}"
   else
     echo -e "${GREY}файл config.toml ${RED}НЕдоступен${GREY} для загрузки${NOFORMAT}"
   fi
@@ -67,7 +67,7 @@ color_string
 echo -e "${GREY}Конец копирования конфига ${YELLOW}PROCS${NOFORMAT}"
 color_string
 
-anykey && clear
+echo
 
 ### Конфиг файл для bottom
 IFS=","
@@ -76,12 +76,12 @@ echo -e "${GREY}Начало копирования конфига ${YELLOW}bott
 color_string
 
 if [[ -f "$HOME/.config/bottom/bottom.toml" ]];then
-  echo -e "${GREEN}Упсик,а файлик ${ORANGE}~/.config/bottom/bottom.toml${GREEN} - уже существует ${NOFORMAT}"
+  echo -e "${GREEN}Упсик,а файлик ${ORANGE}$HOME/.config/bottom/bottom.toml${GREEN} - уже существует ${NOFORMAT}"
 else 
   if wget --quiet --spider "${BTM_CONFIG}"; then
     echo -e "${GREEN}файл ${ORANGE}bottom.toml${GREEN} доступен для загрузки${NOFORMAT}"
     wget --quiet "${BTM_CONFIG}" --directory-prefix "$HOME"/.config/bottom/ &&\
-      echo -e "${GREEN}Конфигурационный файл ${ORANGE}bottom.toml${GREEN} скопирован в папку: ${ORANGE}~/.config/bottom/${NOFORMAT}"
+      echo -e "${GREEN}Конфигурационный файл ${ORANGE}bottom.toml${GREEN} скопирован в папку: ${ORANGE}$HOME/.config/bottom/${NOFORMAT}"
   else
     echo -e "${GREY}файл ${ORANGE}bottom.toml${GREY} НЕ доступен для загрузки${NOFORMAT}"
   fi
@@ -91,4 +91,30 @@ IFS="$Field_Separator"
 color_string
 echo -e "${GREY}Конец копирования конфига ${YELLOW}bottom${NOFORMAT}"
 color_string
+
+echo
+
+### Конфиг файл для fzf
+IFS=","
+color_string
+echo -e "${GREY}Начало копирования конфига ${YELLOW}FZF${GREY} для пользователя: ${ORANGE}$(whoami)${NOFORMAT}"
+color_string
+
+if [[ -f "$HOME/.config/fzf/fzfkey-bindings.bash" ]];then
+  echo -e "${GREEN}Упсик,а файлик ${ORANGE}$HOME/.config/fzf/fzfkey-bindings.bash${GREEN} - уже существует ${NOFORMAT}"
+else 
+  if wget --quiet --spider "${FZF_KEYS_SOURCE}"; then
+    echo -e "${GREEN}файл ${ORANGE}fzfkey-bindings.bash${GREEN} доступен для загрузки${NOFORMAT}"
+    wget --quiet "${FZF_KEYS_SOURCE}" --directory-prefix "$HOME"/.config/fzf/ &&\
+      echo -e "${GREEN}Конфигурационный файл ${ORANGE}fzfkey-bindings.bash${GREEN} скопирован в папку: ${ORANGE}$HOME/.config/fzf/${NOFORMAT}"
+  else
+    echo -e "${GREY}файл ${ORANGE}fzfkey-bindings.bash${GREY} НЕ доступен для загрузки${NOFORMAT}"
+  fi
+fi
+
+IFS="$Field_Separator"
+color_string
+echo -e "${GREY}Конец копирования конфига ${YELLOW}FZF${NOFORMAT}"
+color_string
+
 }

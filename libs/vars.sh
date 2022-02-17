@@ -1,8 +1,8 @@
 
 
 # Системные переменные
-APT_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,git,unzip,iproute2,bash-completion,fd-find"
-YUM_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,mtr,git,unzip,NetworkManager-tui,bash-completion,fd-find"
+APT_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,git,unzip,iproute2,bash-completion"
+YUM_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,mtr,git,unzip,NetworkManager-tui,bash-completion"
 OS_VER="$(hostnamectl |grep -i "operating"|awk '{print tolower($3)}')"
 Field_Separator="$IFS"
 
@@ -21,10 +21,11 @@ $HOME/.inputrc,\
 $HOME/.profile,\
 $HOME/.vimrc"
 
-DEST_FOLDERS="$HOME/.fzf/,$HOME/.config/,$HOME/.vim/autoload/"
+DEST_FOLDERS="$HOME/.config/,$HOME/.vim/autoload/"
 DEST_BIN="/usr/bin"
 DEST_LOCALBIN="/usr/local/bin"
 DEST_BASH_COMPLETION="/etc/bash_completion.d"
+DEST_MAN="/usr/share/man/man1"
 
 GITHUB_PATH="https://raw.githubusercontent.com/rubtsove/dotfiles2/master/sources"
 
@@ -55,8 +56,10 @@ BTM_CONFIG="${GITHUB_PATH}/.config/bottom/bottom.toml"
 
 BAT_SOURCE="https://github.com/sharkdp/bat/releases/download/v0.19.0/bat-v0.19.0-x86_64-unknown-linux-musl.tar.gz"
 
-FZF_SOURCE="https://github.com/junegunn/fzf.git"
-FZF_DIR="$HOME/.fzf"
+FZF_BIN_SOURCE="https://github.com/junegunn/fzf/releases/download/0.29.0/fzf-0.29.0-linux_amd64.tar.gz"
+FZF_MAN_SOURCE="https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf.1"
+FZF_COMPL_SOURCE="https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash"
+FZF_KEYS_SOURCE="https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.bash"
 
 GDU_SOURCE="https://github.com/dundee/gdu/releases/download/v5.13.1/gdu_linux_amd64.tgz"
 

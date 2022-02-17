@@ -31,11 +31,11 @@ else
     cp -rfv "${TMP_FOLDER}"/grc-master/colourfiles/conf.* /usr/local/share/grc/
     echo -e "${GREEN}Файлы ${ORANGE}conf.*${GREEN} скопированы в папку ${ORANGE}/usr/local/share/grc/${NOFORMAT}" &&\
       log "Файл exa скопирован"
-    cp -rfv "${TMP_FOLDER}"/grc-master/grc.1 /usr/share/man/man1
-    echo -e "${GREEN}Файл ${ORANGE}grc.${GREEN}1 скопирован в папку ${ORANGE}/usr/share/man/man1${NOFORMAT}" &&\
+    cp -rfv "${TMP_FOLDER}"/grc-master/grc.1 ${DEST_MAN}
+    echo -e "${GREEN}Файл ${ORANGE}grc.${GREEN}1 скопирован в папку: ${ORANGE}${DEST_MAN}${NOFORMAT}" &&\
       log "Файл exa скопирован"
-    cp -rfv "${TMP_FOLDER}"/grc-master/grcat.1 /usr/share/man/man1
-    echo -e "${GREEN}Файл ${ORANGE}grcat.1${GREEN} скопирован в папку ${ORANGE}/usr/share/man/man1${NOFORMAT}" &&\
+    cp -rfv "${TMP_FOLDER}"/grc-master/grcat.1 ${DEST_MAN}
+    echo -e "${GREEN}Файл ${ORANGE}grcat.1${GREEN} скопирован в папку: ${ORANGE}${DEST_MAN}${NOFORMAT}" &&\
       log "Файл exa скопирован"
     rm -rf "${TMP_FOLDER}" && echo -e "${GREEN}инсталяционный архив ${ORANGE}GRC: ${TMP_FOLDER}${GREEN} - удалён${NOFORMAT}"
     echo -e "${GREEN}ресурсы GRC скопированы${NOFORMAT}" &&\

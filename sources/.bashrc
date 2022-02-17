@@ -58,3 +58,8 @@ export FZF_DEFAULT_COMMAND="find -L"
 if [[ -f "$HOME"/.fuzzy-sys.plugin.sh ]];then
   . "$HOME"/.fuzzy-sys.plugin.sh
 fi
+
+### FZF keybindings
+if [[ -f "$HOME"/.config/fzf/key-bindings.bash ]];then
+  . $HOME"/.config/fzf/key-bindings.bash
+fi
