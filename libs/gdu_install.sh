@@ -9,7 +9,7 @@ color_string
 TMP_FOLDER="/tmp/GDU" && mkdir -p "${TMP_FOLDER}"
 
 if [[ -f $(which gdu) ]] ;then
-  echo -e "${GREEN}Упсик,а файлик ${ORANGE}GDU${GREEN} - уже существует в: $(which gdu)${NOFORMAT}"
+  echo -e "${GREEN}Упсик,а файлик ${ORANGE}GDU${GREEN} - уже существует в: ${ORANGE}$(which gdu)${NOFORMAT}"
 else
   if wget --quiet --spider "${GDU_SOURCE}"; then
     echo -e "${GREEN}Архив ${ORANGE}GDU${GREEN} ДОСТУПЕН для загрузки${NOFORMAT}\n"

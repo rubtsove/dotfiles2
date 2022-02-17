@@ -11,7 +11,7 @@ color_string
 TMP_FOLDER="/tmp/bat" && mkdir -p "${TMP_FOLDER}"
 
 if [[ -f $(which bat) ]] ;then
-  echo -e "${GREEN}Упсик,а файлик ${ORANGE}BAT${GREEN} - уже существует в $(which bat)${NOFORMAT}"
+  echo -e "${GREEN}Упсик,а файлик ${ORANGE}BAT${GREEN} - уже существует в: ${ORANGE}$(which bat)${NOFORMAT}"
 else
   if wget --quiet --spider "${BAT_SOURCE}"; then
     echo -e "${GREEN}Архив ${ORANGE}BAT${GREEN} ДОСТУПЕН для загрузки${NOFORMAT}\n"
