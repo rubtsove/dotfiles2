@@ -13,13 +13,13 @@ fi
 if [ -f "$HOME"/.bash_aliases ]; then
     . "$HOME"/.bash_aliases
 fi
-
 ### bash_completion ###
 if [[ -d /etc/bash_completion.d/ ]];then
   for file in /etc/bash_completion.d/* ; do
   . ${file}
   done
 fi
+unset file
 
 ### Color MAN
 export LESS_TERMCAP_mb=$'\e[1;32m'
