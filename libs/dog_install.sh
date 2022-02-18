@@ -27,6 +27,7 @@ else
       err "Инсталляционынй архив dog НЕДОСТУПЕН для загрузки"
   fi
 fi
+rm -rf "${TMP_FOLDER}"
 color_string
 echo -e "${GREY}Конец установки бинарника: ${YELLOW}dog${NOFORMAT}"
 color_string
@@ -53,6 +54,7 @@ else
       err "Инсталляционынй архив dog НЕДОСТУПЕН для загрузки"
   fi
 fi
+rm -rf "${TMP_FOLDER}"
 color_string
 echo -e "${GREY}Конец установки: ${YELLOW}dog completions${NOFORMAT}"
 color_string
@@ -79,9 +81,8 @@ else
       err "Инсталляционынй архив dog НЕДОСТУПЕН для загрузки"
   fi
 fi
+rm -rf "${TMP_FOLDER}"
 color_string
 echo -e "${GREY}Конец установки: ${YELLOW}dog MAN${NOFORMAT}"
 color_string
-
-rm -rf "${TMP_FOLDER}"
 }

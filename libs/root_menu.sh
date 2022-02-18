@@ -30,7 +30,7 @@ while true; do
     4) ctsh_install && anykey && cheat_install && anykey && duf_install && anykey && exa_install &&\
       anykey && sss_install && anykey && procs_install && anykey && grc_install && anykey && fzf_install && anykey && \
       btm_install && anykey && dynmotd_install && anykey && bat_install && anykey && gdu_install && anykey &&\
-      ds_install && anykey && diskus_install && anykey && fdfind_install && anykey && ripgrep_install && anykey\
+      ds_install && anykey && diskus_install && anykey && fdfind_install && anykey && ripgrep_install && anykey &&\
       dog_install && anykey ;;
     5) check_dotfiles_exsist && anykey;;
     6) delete_dotfiles && anykey ;;
