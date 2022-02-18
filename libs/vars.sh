@@ -70,3 +70,5 @@ FDFIND_SOURCE="https://github.com/sharkdp/fd/releases/download/v8.3.2/fd-v8.3.2-
 RIPGREP_SOURCE="https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz"
 
 DS_SOURCE="${GITHUB_PATH}/bins/ds"
+
+DOG_SOURCE="https://github.com/ogham/dog/releases/download/v0.1.0/dog-v0.1.0-x86_64-unknown-linux-gnu.zip"

@@ -45,7 +45,7 @@ else
     echo -e "${GREY}Completion файл ${ORANGE}fzf.bash${GREY} доступен для загрузки${NOFORMAT}"
     wget --quiet "${FZF_COMPL_SOURCE}" --output-document="${TMP_FOLDER}"/fzf.bash
     cp -rfv "${TMP_FOLDER}"/fzf.bash "${DEST_BASH_COMPLETION}"
-	  echo -e "${GREEN}Completion файл ${ORANGE}fzf.bash${GREEN} скопирован в папку: ${DEST_BASH_COMPLETION}" &&\
+	  echo -e "${GREEN}Completion файл ${ORANGE}fzf.bash${GREEN} скопирован в папку:${ORANGE}${DEST_BASH_COMPLETION}" &&\
       log "Конфигурационный файл fzf.bash скопирован в /etc/bash_completion.d/" 
   else
     echo -e "${GREY}Completion файл fzf.bash ${RED}НЕдоступен${GREY} для загрузки${NOFORMAT}"&&\
@@ -63,7 +63,7 @@ color_string
 echo -e "${GREY}Начало установки ${YELLOW}fzf MAN${NOFORMAT}"
 color_string
 
-if [[ -f "${DEST_MAN}/fzf.1" ]];then
+if [[ -f "${DEST_MAN}"/fzf.1 ]];then
   echo -e "${GREEN}Упсик,а файлик ${ORANGE}${DEST_MAN}/fzf.1${GREEN} - уже существует${NOFORMAT}"
 else 
   if wget --quiet --spider "${FZF_MAN_SOURCE}"; then
