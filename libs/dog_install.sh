@@ -44,6 +44,7 @@ if [[ -f "${DEST_BASH_COMPLETION}"/dog.bash ]];then
 else 
   if wget --quiet --spider "${DOG_SOURCE}"; then
     echo -e "${GREEN}Инсталляционынй архив ${ORANGE}dog ДОСТУПЕН${GREEN} для загрузки${NOFORMAT}"
+    [[ ! -d "${TMP_FOLDER}" ]] && mkdir -p "${TMP_FOLDER}"
     wget --quiet "${DOG_SOURCE}" --output-document="${TMP_FOLDER}"/dog.zip &&\
     unzip -q "${TMP_FOLDER}"/dog.zip -d "${TMP_FOLDER}"
     cp -rfv "${TMP_FOLDER}"/completions/dog.bash "${DEST_BASH_COMPLETION}"
@@ -71,6 +72,7 @@ if [[ -f "${DEST_MAN}"/dog.1 ]];then
 else 
   if wget --quiet --spider "${DOG_SOURCE}"; then
     echo -e "${GREEN}Инсталляционынй архив ${ORANGE}dog ДОСТУПЕН${GREEN} для загрузки${NOFORMAT}"
+    [[ ! -d "${TMP_FOLDER}" ]] && mkdir -p "${TMP_FOLDER}"
     wget --quiet "${DOG_SOURCE}" --output-document="${TMP_FOLDER}"/dog.zip &&\
     unzip -q "${TMP_FOLDER}"/dog.zip -d "${TMP_FOLDER}"
     cp -rfv "${TMP_FOLDER}"/man/dog.1 "${DEST_MAN}"
