@@ -100,11 +100,11 @@ color_string
 echo -e "${GREY}Начало копирования конфига ${YELLOW}FZF${GREY} для пользователя: ${ORANGE}$(whoami)${NOFORMAT}"
 color_string
 
-if [[ -f "$HOME/.config/fzf/fzfkey-bindings.bash" ]];then
-  echo -e "${GREEN}Упсик,а файлик ${ORANGE}$HOME/.config/fzf/fzfkey-bindings.bash${GREEN} - уже существует ${NOFORMAT}"
+if [[ -f "$HOME/.config/fzf/key-bindings.bash" ]];then
+  echo -e "${GREEN}Упсик,а файлик ${ORANGE}$HOME/.config/fzf/key-bindings.bash${GREEN} - уже существует ${NOFORMAT}"
 else 
   if wget --quiet --spider "${FZF_KEYS_SOURCE}"; then
-    echo -e "${GREEN}файл ${ORANGE}fzfkey-bindings.bash${GREEN} доступен для загрузки${NOFORMAT}"
+    echo -e "${GREEN}файл ${ORANGE}key-bindings.bash${GREEN} доступен для загрузки${NOFORMAT}"
     wget --quiet "${FZF_KEYS_SOURCE}" --directory-prefix "$HOME"/.config/fzf/ &&\
       echo -e "${GREEN}Конфигурационный файл ${ORANGE}key-bindings.bash${GREEN} скопирован в папку: ${ORANGE}$HOME/.config/fzf/${NOFORMAT}"
   else
