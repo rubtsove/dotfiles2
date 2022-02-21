@@ -21,4 +21,5 @@ IFS="$Field_Separator"
 echo -e "${BLUE}-----------------------${NOFORMAT}"
 echo -e "${YELLOW}Конец блока проверки наличия папки .vim${NOFORMAT}"
 echo -e "${BLUE}-----------------------${NOFORMAT}"
+echo
 }
