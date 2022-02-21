@@ -11,7 +11,7 @@ color_string
 TMP_FOLDER="/tmp/bat" && mkdir -p "${TMP_FOLDER}"
 
 if [[ -f $(which bat) ]] ;then
-  echo -e "${GREEN}Упсик,а файлик ${ORANGE}BAT${GREEN} - уже существует в $(which bat)${NOFORMAT}"
+  echo -e "${GREEN}Упсик,а файлик ${ORANGE}BAT${GREEN} - уже существует в: ${ORANGE}$(which bat)${NOFORMAT}"
 else
   if wget --quiet --spider "${BAT_SOURCE}"; then
     echo -e "${GREEN}Архив ${ORANGE}BAT${GREEN} ДОСТУПЕН для загрузки${NOFORMAT}\n"
@@ -24,7 +24,7 @@ else
 	  echo -e "${GREEN}Файл ${ORANGE}BAT${GREEN} скопирован в папку: ${ORANGE}$(which bat)${NOFORMAT}" &&\
       log "Бинарный файл bam скопирован загружен"
     cp -rfv "${TMP_FOLDER}"/autocomplete/bat.bash "${DEST_BASH_COMPLETION}"
-	  echo -e "${GREEN}Файл ${ORANGE}bat.bash${GREEN} скопирован в папку ${ORANGE}/etc/bash_completion.d/${NOFORMAT}" &&\
+	  echo -e "${GREEN}Файл ${ORANGE}bat.bash${GREEN} скопирован в папку: ${ORANGE}${DEST_BASH_COMPLETION}${NOFORMAT}" &&\
       log "Файл bat.bash скопирован в папку /etc/bash_completion.d/"
     rm -rf "${TMP_FOLDER}" && echo -e "${GREEN}Архив ${ORANGE}BAT: ${TMP_FOLDER}${GREEN} удалён${NOFORMAT}"
   else

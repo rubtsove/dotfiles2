@@ -21,7 +21,7 @@ else
 	  echo -e "${GREEN}Файл ${ORANGE}BTM${GREEN} скопирован в папку: ${ORANGE}$(which btm)${NOFORMAT}" &&\
       log "Файл btm скопирован загружен"
     cp -rfv "${TMP_FOLDER}"/completion/btm.bash "${DEST_BASH_COMPLETION}"
-	  echo -e "${GREEN}Файл ${ORANGE}btm.bash${GREEN} скопирован в папку ${ORANGE}/etc/bash_completion.d/${NOFORMAT}" &&\
+	  echo -e "${GREEN}Файл ${ORANGE}btm.bash${GREEN} скопирован в папку: ${ORANGE}${DEST_BASH_COMPLETION}${NOFORMAT}" &&\
       log "Файл btm.bash скопирован в папку /etc/bash_completion.d/"
     rm -rf "${TMP_FOLDER}" && echo -e "${GREEN}инсталяционный архив ${ORANGE}BotTom: ${TMP_FOLDER}${GREEN} удалён${NOFORMAT}"
   else

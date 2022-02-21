@@ -21,11 +21,11 @@ else
     cp -rfv "${TMP_FOLDER}"/bin/exa "${DEST_LOCALBIN}" && chmod +x "${DEST_LOCALBIN}"/exa && \
     echo -e "${GREEN}Файл ${ORANGE}EXA${GREEN} скопирован в папку: ${ORANGE}$(which exa)${NOFORMAT}" &&\
       log "Файл exa скопирован" 
-    cp -rfv "${TMP_FOLDER}"/man/* /usr/share/man/man1  &&\
-    echo -e "${GREEN}Файл ${ORANGE}MAN${GREEN} скопирован в папку: ${ORANGE}/usr/share/man/man1${NOFORMAT}" &&\
+    cp -rfv "${TMP_FOLDER}"/man/* ${DEST_MAN}  &&\
+    echo -e "${GREEN}Файл ${ORANGE}MAN${GREEN} скопирован в папку: ${ORANGE}${DEST_MAN}${NOFORMAT}" &&\
       log "Файлы MAN exa скопированы"
     cp -rfv "${TMP_FOLDER}"/completions/exa.bash "${DEST_BASH_COMPLETION}" &&\
-    echo -e "${GREEN}Файл ${ORANGE}exa.bash (completion)${GREEN} скопирован в папку: ${ORANGE}/etc/bash_completion.d/${NOFORMAT}" &&\
+    echo -e "${GREEN}Файл ${ORANGE}exa.bash (completion)${GREEN} скопирован в папку: ${ORANGE}${DEST_BASH_COMPLETION}${NOFORMAT}" &&\
       log "Файл exa.bash (completion) скопирован" 
     rm -rf "${TMP_FOLDER}" && echo -e "${GREEN}инсталяционный архив ${ORANGE}EXA: ${TMP_FOLDER}${GREEN} удалён${NOFORMAT}"
   else

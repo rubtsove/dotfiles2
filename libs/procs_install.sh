@@ -17,7 +17,6 @@ if [[ -f $(which procs) ]];then
 else
   if wget --quiet --spider "${PROCS_SOURCE_ARCH}"; then
     echo -e "${GREEN}Инсталляционынй архив ${ORANGE}PROCS ДОСТУПЕН${GREEN} для загрузки${NOFORMAT}"
-    #wget --quiet "${PROCS_SOURCE_ARCH}" --directory-prefix="${TMP_FOLDER}" &&\
     wget --quiet "${PROCS_SOURCE_ARCH}" --output-document="${TMP_FOLDER}"/procs.zip &&\
     unzip -q "${TMP_FOLDER}"/procs.zip -d "${TMP_FOLDER}"
     cp -rfv "${TMP_FOLDER}"/procs "${DEST_LOCALBIN}" && chmod +x "${DEST_LOCALBIN}"/procs
@@ -40,13 +39,13 @@ color_string
 echo -e "${GREY}Начало установки ${YELLOW}PROCS completions${NOFORMAT}"
 color_string
 
-if [[ -f "${DEST_BASH_COMPLETION}/procs.bash" ]];then
-  echo -e "${GREEN}Упсик,а файлик ${ORANGE}/etc/bash_completion.d/procs.bash${GREEN} - уже существует${NOFORMAT}"
+if [[ -f "${DEST_BASH_COMPLETION}"/procs.bash ]];then
+  echo -e "${GREEN}Упсик,а файлик ${ORANGE}${DEST_BASH_COMPLETION}/procs.bash${GREEN} - уже существует${NOFORMAT}"
 else 
   if wget --quiet --spider "${PROCS_COMPL}"; then
-    echo -e "${GREY}файл ${ORANGE}procs.bash${GREY} доступен для загрузки${NOFORMAT}"
+    echo -e "${GREY}файл: ${ORANGE}procs.bash${GREY} доступен для загрузки${NOFORMAT}"
     wget --quiet "${PROCS_COMPL}" --directory-prefix="${DEST_BASH_COMPLETION}" &&\
-      echo -e "${GREEN}Конфигурационный файл ${ORANGE}procs.bash${GREEN} скопирован в /etc/bash_completion.d/${NOFORMAT}"&&\
+      echo -e "${GREEN}Конфигурационный файл ${ORANGE}procs.bash${GREEN} скопирован в: ${ORANGE}${DEST_BASH_COMPLETION}${NOFORMAT}"&&\
       log "Конфигурационный файл procs.bash скопирован в /etc/bash_completion.d/" 
   else
     echo -e "${GREY}файл procs.bash ${RED}НЕдоступен${GREY} для загрузки${NOFORMAT}"&&\

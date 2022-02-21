@@ -13,13 +13,13 @@ fi
 if [ -f "$HOME"/.bash_aliases ]; then
     . "$HOME"/.bash_aliases
 fi
-
 ### bash_completion ###
 if [[ -d /etc/bash_completion.d/ ]];then
   for file in /etc/bash_completion.d/* ; do
   . ${file}
   done
 fi
+unset file
 
 ### Color MAN
 export LESS_TERMCAP_mb=$'\e[1;32m'
@@ -51,10 +51,15 @@ else
   export PS1='\n\e[1;32m[\u\e[m@\e[1;32m\h]\e[m \e[1;33m\A\e[m \e[1;36m[\w]\e[m \$ '
 fi
 
-### FZF show hidden filesvim ~
+### FZF show hidden filesvim 
 export FZF_DEFAULT_COMMAND="find -L"
 
 ### FZF systemctl
 if [[ -f "$HOME"/.fuzzy-sys.plugin.sh ]];then
   . "$HOME"/.fuzzy-sys.plugin.sh
+fi
+
+### FZF keybindings
+if [[ -f "$HOME"/.config/fzf/key-bindings.bash ]];then
+  . "$HOME"/.config/fzf/key-bindings.bash
 fi
