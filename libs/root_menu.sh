@@ -25,9 +25,9 @@ while true; do
   case "$choose" in
     1) all_upgrade && anykey;;
     2) pkg_install && anykey;;
-    3) ctsh_install && anykey && duf_install && anykey && sss_install && anykey && procs_install &&\
+    3) ctsh_install && anykey && tldr_install && anykey && duf_install && anykey && sss_install && anykey && procs_install &&\
        anykey && grc_install && anykey && fzf_install && anykey && dynmotd_install && anykey;;
-    4) ctsh_install && anykey && cheat_install && anykey && duf_install && anykey && exa_install &&\
+    4) ctsh_install && anykey && tldr_install && anykey && cheat_install && anykey && duf_install && anykey && exa_install &&\
       anykey && sss_install && anykey && procs_install && anykey && grc_install && anykey && fzf_install && anykey && \
       btm_install && anykey && dynmotd_install && anykey && bat_install && anykey && gdu_install && anykey &&\
       ds_install && anykey && diskus_install && anykey && fdfind_install && anykey && ripgrep_install && anykey ;;

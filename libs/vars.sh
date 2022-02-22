@@ -72,3 +72,6 @@ RIPGREP_SOURCE="https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/r
 DS_SOURCE="${GITHUB_PATH}/bins/ds"
 
 DOG_SOURCE="https://github.com/ogham/dog/releases/download/v0.1.0/dog-v0.1.0-x86_64-unknown-linux-gnu.zip"
+
+TLDR_BIN_SOURCE="https://github.com/dbrgn/tealdeer/releases/download/v1.5.0/tealdeer-linux-x86_64-musl"
+TLDR_COMPL_SOURCE="https://github.com/dbrgn/tealdeer/releases/download/v1.5.0/completions_bash"
