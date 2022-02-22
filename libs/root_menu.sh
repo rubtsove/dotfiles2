@@ -11,8 +11,8 @@ while true; do
   color_string
   echo -e "${GREY}нажми ${CYAN}1${GREY} - для установки обновлений"
   echo -e "${GREY}нажми ${CYAN}2${GREY} - для установки пакетов"
-  echo -e "${GREY}нажми ${CYAN}3${GREY} - (необходимый минимум) - для установки cht.sh + duf + sss + procs + grc + fzf + dynmotd "
-  echo -e "${GREY}нажми ${CYAN}4${GREY} - для установки cht.sh + cheat + duf + sss + procs + grc + fzf + dynmotd + exa + btm + bat + gdu + ds + diskus + fdfind + ripgrep"
+  echo -e "${GREY}нажми ${CYAN}3${GREY} - (необходимый минимум) - для установки cht.sh +tldr + duf + sss + procs + grc + fzf + dynmotd "
+  echo -e "${GREY}нажми ${CYAN}4${GREY} - для установки cht.sh + +tldr + cheat + duf + sss + procs + grc + fzf + dynmotd + exa + btm + bat + gdu + ds + diskus + fdfind + ripgrep"
   echo -e "${GREY}нажми ${CYAN}5${GREY} - для проверки наличия старых doftiles"
   echo -e "${GREY}нажми ${CYAN}6${GREY} - для удаления старых dotfiles"
   echo -e "${GREY}нажми ${CYAN}7${GREY} - для копрования dotfiles"
