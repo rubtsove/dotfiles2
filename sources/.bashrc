@@ -8,7 +8,6 @@ if [ -z "${OS_VER}" ];then
   export OS_VER="$(hostnamectl |grep -i "operating"|awk '{print tolower($3)}')"
 fi
 
-
 ### aliases ###
 if [ -f "$HOME"/.bash_aliases ]; then
     . "$HOME"/.bash_aliases
