@@ -37,35 +37,35 @@ else
   echo -e "${GREY}файл ${ORANGE}.bash_aliases: ${RED}УЖЕ существует${NOFORMAT}"
 fi
 
-if [[ -f "${HOME}"/.bashrc ]];then 
+if [[ ! -e "${HOME}"/.bashrc ]];then 
   wget --quiet "${SOURCE_BASHRC}" --directory-prefix="${HOME}" &&\
   echo -e "${GREEN}Скачан файл: ${ORANGE}.bashrc${NOFORMAT}" 
 else
   echo -e "${GREY}файл: ${ORANGE}.bashrc ${RED}УЖЕ существует${NOFORMAT}"
 fi
 
-if [[ -f "${HOME}"/.fuzzy-sys.plugin.sh ]];then 
+if [[ ! -e "${HOME}"/.fuzzy-sys.plugin.sh ]];then 
   wget --quiet "${SOURCE_FUZZYSYS}" --directory-prefix="${HOME}"  &&\
   echo -e "${GREEN}Скачан файл: ${ORANGE}.fuzzy-sys.plugin.sh${NOFORMAT}" 
 else
   echo -e "${GREY}файл: ${ORANGE}.fuzzy-sys.plugin.sh ${RED}УЖЕ существует${NOFORMAT}"
 fi
 
-if [[ -f "${HOME}"/.inputrc ]];then 
+if [[ ! -e "${HOME}"/.inputrc ]];then 
   wget --quiet "${SOURCE_INPUTRC}" --directory-prefix="${HOME}" &&\
   echo -e "${GREEN}Скачан файл: ${ORANGE}.inputrc${NOFORMAT}" 
 else
   echo -e "${GREY}файл: ${ORANGE}.inputrc ${RED}УЖЕ существует${NOFORMAT}"
 fi
 
-if [[ -f "${HOME}"/.profile ]];then 
+if [[ ! -e "${HOME}"/.profile ]];then 
   wget --quiet "${SOURCE_PROFILE}" --directory-prefix="${HOME}" &&\
   echo -e "${GREEN}Скачан файл: ${ORANGE}.profile${NOFORMAT}" 
 else
   echo -e "${GREY}файл: ${ORANGE}.profile ${RED}УЖЕ существует${NOFORMAT}"
 fi
 
-if [[ -f "${HOME}"/.vimrc ]];then 
+if [[ ! -e "${HOME}"/.vimrc ]];then 
   wget --quiet "${SOURCE_VIMRC}" --directory-prefix="${HOME}" &&\
   echo -e "${GREEN}Скачан файл: ${ORANGE}.vimrc${NOFORMAT}" 
 else
