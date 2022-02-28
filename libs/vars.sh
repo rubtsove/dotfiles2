@@ -37,7 +37,7 @@ CHEAT_COMPL="${GITHUB_PATH}/.config/cheat/cheat.bash"
 
 SSS_SOURCE="${GITHUB_PATH}/.config/sss"
 
-DYNMOTD_SOURCE="${GITHUB_PATH}/.config/dynmotd.sh"
+DYNMOTD_SOURCE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/dynmotd.sh"
 DYNMOTD_DEST="/etc/profile.d/dynmotd.sh"
 
 DUF_SOURCE_DEB="https://github.com/muesli/duf/releases/download/v0.7.0/duf_0.7.0_linux_amd64.deb"
