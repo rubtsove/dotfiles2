@@ -42,7 +42,7 @@ DEST_MAN="/usr/share/man/man1"
 
 
 CHT_SOURCE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.config/cht.sh/cht.sh"
-CHT_COMPL="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.config/cht.sh/cht.bash"
+CHT_COMPL="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.config/cht.sh/chtsh.bash"
 #CHT_SOURCE="${GITHUB_PATH}/.config/cht.sh/cht.sh"
 #CHT_COMPL="${GITHUB_PATH}/.config/cht.sh/chtsh.bash"
 
