@@ -13,13 +13,13 @@ else
 fi
 
 # Пользовательске переменные
-DEST_FILES="\
-$HOME/.bash_aliases,\
-$HOME/.bashrc,\
-$HOME/.fuzzy-sys.plugin.sh,\
-$HOME/.inputrc,\
-$HOME/.profile,\
-$HOME/.vimrc"
+#DEST_FILES="\
+#$HOME/.bash_aliases,\
+#$HOME/.bashrc,\
+#$HOME/.fuzzy-sys.plugin.sh,\
+#$HOME/.inputrc,\
+#$HOME/.profile,\
+#$HOME/.vimrc"
 
 SOURCE_BASH_ALIASES="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.bash_aliases"
 SOURCE_BASHRC="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.bashrc"
@@ -28,8 +28,9 @@ SOURCE_INPUTRC="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local
 SOURCE_PROFILE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.profile"
 SOURCE_VIMRC="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.vimrc"
 
-DYNMOTD_SOURCE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/dynmotd.sh"
+DYNMOTD_SOURCE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/bins/dynmotd.sh"
 DYNMOTD_DEST="/etc/profile.d/dynmotd.sh"
+#DYNMOTD_SOURCE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/dynmotd.sh"
 
 DEST_FOLDERS="$HOME/.config/,$HOME/.vim/autoload/"
 DEST_BIN="/usr/bin"
@@ -37,31 +38,37 @@ DEST_LOCALBIN="/usr/local/bin"
 DEST_BASH_COMPLETION="/etc/bash_completion.d"
 DEST_MAN="/usr/share/man/man1"
 
-GITHUB_PATH="https://raw.githubusercontent.com/rubtsove/dotfiles2/master/sources"
+#GITHUB_PATH="https://raw.githubusercontent.com/rubtsove/dotfiles2/master/sources"
 
-CHT_SOURCE="${GITHUB_PATH}/.config/cht.sh/cht.sh"
-CHT_COMPL="${GITHUB_PATH}/.config/cht.sh/chtsh.bash"
+
+CHT_SOURCE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.config/cht.sh/cht.sh"
+CHT_COMPL="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.config/cht.sh/cht.bash"
+#CHT_SOURCE="${GITHUB_PATH}/.config/cht.sh/cht.sh"
+#CHT_COMPL="${GITHUB_PATH}/.config/cht.sh/chtsh.bash"
 
 CHEAT_SOURCE="https://github.com/cheat/cheat/releases/download/4.2.3/cheat-linux-amd64.gz"
-CHEAT_COMPL="${GITHUB_PATH}/.config/cheat/cheat.bash"
+CHEAT_COMPL="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.config/cheat/cheat.bash"
+#CHEAT_COMPL="${GITHUB_PATH}/.config/cheat/cheat.bash"
 
-SSS_SOURCE="${GITHUB_PATH}/.config/sss"
-
-
+SSS_SOURCE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/bins/sss"
+#SSS_SOURCE="${GITHUB_PATH}/.config/sss"
 
 DUF_SOURCE_DEB="https://github.com/muesli/duf/releases/download/v0.7.0/duf_0.7.0_linux_amd64.deb"
 DUF_SOURCE_RPM="https://github.com/muesli/duf/releases/download/v0.7.0/duf_0.7.0_linux_amd64.rpm"
 
 PROCS_SOURCE_ARCH="https://github.com/dalance/procs/releases/download/v0.12.0/procs-v0.12.0-x86_64-lnx.zip"
-PROCS_COMPL="${GITHUB_PATH}/.config/procs/procs.bash"
-PROCS_CONFIG="${GITHUB_PATH}/.config/procs/config.toml"
+PROCS_COMPL="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.config/procs/procs.bash"
+PROCS_CONFIG="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.config/procs/config.toml"
+#PROCS_CONFIG="${GITHUB_PATH}/.config/procs/config.toml"
+#PROCS_COMPL="${GITHUB_PATH}/.config/procs/procs.bash"
 
 GRC_SOURCE_ARCH="https://github.com/garabik/grc/archive/master.zip"
 
 EXA_SOURCE_ARCH="https://github.com/ogham/exa/releases/download/v0.10.1/exa-linux-x86_64-v0.10.1.zip"
 
 BTM_SOURCE_ARCH="https://github.com/ClementTsang/bottom/releases/download/0.6.6/bottom_x86_64-unknown-linux-gnu.tar.gz"
-BTM_CONFIG="${GITHUB_PATH}/.config/bottom/bottom.toml"
+BTM_CONFIG="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.config/bottom/bottom.toml"
+#BTM_CONFIG="${GITHUB_PATH}/.config/bottom/bottom.toml"
 
 BAT_SOURCE="https://github.com/sharkdp/bat/releases/download/v0.19.0/bat-v0.19.0-x86_64-unknown-linux-musl.tar.gz"
 
@@ -78,7 +85,8 @@ FDFIND_SOURCE="https://github.com/sharkdp/fd/releases/download/v8.3.2/fd-v8.3.2-
 
 RIPGREP_SOURCE="https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz"
 
-DS_SOURCE="${GITHUB_PATH}/bins/ds"
+DS_SOURCE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/bins/ds"
+#DS_SOURCE="${GITHUB_PATH}/bins/ds"
 
 DOG_SOURCE="https://github.com/ogham/dog/releases/download/v0.1.0/dog-v0.1.0-x86_64-unknown-linux-gnu.zip"
 
