@@ -29,15 +29,59 @@ IFS=","
 color_string
 echo -e "${GREY}Начало копирования ${YELLOW}dotfiles${GREY} для пользователя: ${ORANGE}$(whoami)${NOFORMAT}"
 color_string
-for file in ${DEST_FILES}
-do
-  if [[ ! -e "${file}" ]];then
-    wget --quiet "${GITHUB_PATH}/${file##*/}" --directory-prefix="$HOME/" &&\
-    echo -e "${GREEN}Скачан файл ${ORANGE}${file##*/}${NOFORMAT}" 
-  else
-    echo -e "${GREY}файл ${ORANGE}${file}: ${RED}УЖЕ существует${NOFORMAT}"
-  fi
-done
+
+if [[ ! -e "${HOME}"/.bash_aliases ]];then 
+  wget --quiet "${SOURCE_BASH_ALIASES}" --directory-prefix="${HOME}" &&\
+  echo -e "${GREEN}Скачан файл: ${ORANGE}.bash_aliases${NOFORMAT}" 
+else
+  echo -e "${GREY}файл ${ORANGE}.bash_aliases: ${RED}УЖЕ существует${NOFORMAT}"
+fi
+
+if [[ -f "${HOME}"/.bashrc ]];then 
+  wget --quiet "${SOURCE_BASHRC}" --directory-prefix="${HOME}" &&\
+  echo -e "${GREEN}Скачан файл: ${ORANGE}.bashrc${NOFORMAT}" 
+else
+  echo -e "${GREY}файл: ${ORANGE}.bashrc ${RED}УЖЕ существует${NOFORMAT}"
+fi
+
+if [[ -f "${HOME}"/.fuzzy-sys.plugin.sh ]];then 
+  wget --quiet "${SOURCE_FUZZYSYS}" --directory-prefix="${HOME}"  &&\
+  echo -e "${GREEN}Скачан файл: ${ORANGE}.fuzzy-sys.plugin.sh${NOFORMAT}" 
+else
+  echo -e "${GREY}файл: ${ORANGE}.fuzzy-sys.plugin.sh ${RED}УЖЕ существует${NOFORMAT}"
+fi
+
+if [[ -f "${HOME}"/.inputrc ]];then 
+  wget --quiet "${SOURCE_INPUTRC}" --directory-prefix="${HOME}" &&\
+  echo -e "${GREEN}Скачан файл: ${ORANGE}.inputrc${NOFORMAT}" 
+else
+  echo -e "${GREY}файл: ${ORANGE}.inputrc ${RED}УЖЕ существует${NOFORMAT}"
+fi
+
+if [[ -f "${HOME}"/.profile ]];then 
+  wget --quiet "${SOURCE_PROFILE}" --directory-prefix="${HOME}" &&\
+  echo -e "${GREEN}Скачан файл: ${ORANGE}.profile${NOFORMAT}" 
+else
+  echo -e "${GREY}файл: ${ORANGE}.profile ${RED}УЖЕ существует${NOFORMAT}"
+fi
+
+if [[ -f "${HOME}"/.vimrc ]];then 
+  wget --quiet "${SOURCE_VIMRC}" --directory-prefix="${HOME}" &&\
+  echo -e "${GREEN}Скачан файл: ${ORANGE}.vimrc${NOFORMAT}" 
+else
+  echo -e "${GREY}файл: ${ORANGE}.vimrc ${RED}УЖЕ существует${NOFORMAT}"
+fi
+
+
+#for file in ${DEST_FILES}
+#do
+#  if [[ ! -e "${file}" ]];then
+#    wget --quiet "${GITHUB_PATH}/${file##*/}" --directory-prefix="$HOME/" &&\
+#    echo -e "${GREEN}Скачан файл ${ORANGE}${file##*/}${NOFORMAT}" 
+#  else
+#    echo -e "${GREY}файл ${ORANGE}${file}: ${RED}УЖЕ существует${NOFORMAT}"
+#  fi
+#done
 IFS="$Field_Separator"
 color_string
 echo -e "${GREY}Конец копирования ${YELLOW}dotfiles${NOFORMAT}"
