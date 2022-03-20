@@ -33,6 +33,7 @@ CHT_COMPL="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.con
 
 CHEAT_SOURCE="https://github.com/cheat/cheat/releases/download/4.2.3/cheat-linux-amd64.gz"
 CHEAT_COMPL="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.config/cheat/cheat.bash"
+CHEATSHEETS_SOURCE="https://raw.githubusercontent.com/cheat/cheat/master/scripts/git/cheatsheets"
 
 SSS_SOURCE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/bins/sss"
 

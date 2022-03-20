@@ -50,8 +50,33 @@ else
       err "файлик cheat.bash completion НЕ доступен для загрузки" 
   fi
 fi
-rm -rf "${TMP_FOLDER}"
 color_string
 echo -e "${GREY}Конец установки ${YELLOW}CHEAT completion${NOFORMAT}"
+color_string
+
+echo
+
+###### cheatsheet copy block
+color_string
+echo -e "${GREY}Начало установки ${YELLOW}CHEATSHEETS${NOFORMAT}"
+color_string
+if [[ -f $(which cheatsheets) ]];then
+  echo -e "${GREEN}Упсик,а файлик ${ORANGE}CHEATSHEETS${GREEN} - уже существует в папке: ${ORANGE}$(which cheatsheets)${NOFORMAT}"
+else
+  if wget --quiet --spider "${CHEATSHEETS_SOURCE}" ;then 
+    echo -e "${GREEN}Файл ${ORANGE}CHEATSHEETS${GREEN} доступен для загрузки ${NOFORMAT}"
+    wget --quiet "${CHEATSHEETS_SOURCE}" --directory-prefix="${DEST_LOCALBIN}" \
+    && chmod +x "${DEST_LOCALBIN}"/cheatsheets
+    #rm -rf "${TMP_FOLDER}" && echo -e "${GREY}инсталяционный файл CHEAT удалён${NOFORMAT}"
+    echo -e "${GREEN}Бинарник ${ORANGE}CHEATSHEETS${GREEN} скопирован в папку: ${ORANGE}$(which cheatsheets)${NOFORMAT}"&&\
+      log "Бинарник cheat скопирован" 
+  else
+    echo -e "${GREY}файл CHEATSHEETS ${RED}НЕдоступен${GREY} для загрузки${NOFORMAT}" &&\
+      err "файл CHEAT НЕдоступен для загрузки" 
+	fi
+fi
+rm -rf "${TMP_FOLDER}"
+color_string
+echo -e "${GREY}Конец установки ${YELLOW}CHEATSHEETS${NOFORMAT}"
 color_string
 }
