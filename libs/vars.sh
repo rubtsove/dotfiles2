@@ -12,14 +12,14 @@ else
   PKG_MANAGER="yum" && SOURCE_PACKAGES="${YUM_PACKAGES}"
 fi
 
-SOURCE_BASH_ALIASES="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.bash_aliases"
-SOURCE_BASHRC="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.bashrc"
+SOURCE_BASH_ALIASES="https://raw.githubusercontent.com/rubtsove/dotfiles/master/ascetic/.bash_aliases"
+SOURCE_BASHRC="https://raw.githubusercontent.com/rubtsove/dotfiles/master/ascetic/.bashrc"
 SOURCE_FUZZYSYS="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.fuzzy-sys.plugin.sh"
-SOURCE_INPUTRC="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.inputrc"
-SOURCE_PROFILE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.profile"
-SOURCE_VIMRC="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.vimrc"
+SOURCE_INPUTRC="https://raw.githubusercontent.com/rubtsove/dotfiles/master/ascetic/.inputrc"
+SOURCE_PROFILE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/ascetic/.profile"
+SOURCE_VIMRC="https://raw.githubusercontent.com/rubtsove/dotfiles/master/ascetic/.vimrc"
 
-DYNMOTD_SOURCE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/bins/dynmotd.sh"
+DYNMOTD_SOURCE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/ascetic/dynmotd.sh"
 DYNMOTD_DEST="/etc/profile.d/dynmotd.sh"
 
 DEST_FOLDERS="$HOME/.config/,$HOME/.vim/autoload/"
