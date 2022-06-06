@@ -1,7 +1,7 @@
 
 
 # Системные переменные
-APT_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,git,unzip,iproute2,bash-completion"
+APT_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,git,unzip,iproute2,bash-completion,net-tools,ncat"
 YUM_PACKAGES="vim,wget,curl,htop,lnav,tree,ccze,needrestart,python3,mtr,git,unzip,NetworkManager-tui,bash-completion"
 OS_VER="$(hostnamectl |grep -i "operating"|awk '{print tolower($3)}')"
 Field_Separator="$IFS"
@@ -71,6 +71,10 @@ DOG_SOURCE="https://github.com/ogham/dog/releases/download/v0.1.0/dog-v0.1.0-x86
 
 TLDR_BIN_SOURCE="https://github.com/dbrgn/tealdeer/releases/download/v1.5.0/tealdeer-linux-x86_64-musl"
 TLDR_COMPL_SOURCE="https://github.com/dbrgn/tealdeer/releases/download/v1.5.0/completions_bash"
+
+LSCOLORS_SOURCE="https://github.com/sharkdp/lscolors/releases/download/v0.10.0/lscolors-v0.10.0-x86_64-unknown-linux-musl.tar.gz"
+VIVID_SOURCE="https://github.com/sharkdp/vivid/releases/download/v0.8.0/vivid-v0.8.0-x86_64-unknown-linux-musl.tar.gz"
+
 
 
 # Пользовательске переменные

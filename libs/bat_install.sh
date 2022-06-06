@@ -22,7 +22,7 @@ else
     mv "${TMP_FOLDER}"/bat*/* "${TMP_FOLDER}"
     cp -rfv "${TMP_FOLDER}"/bat "${DEST_LOCALBIN}" && chmod +x "${DEST_LOCALBIN}"/bat
 	  echo -e "${GREEN}Файл ${ORANGE}BAT${GREEN} скопирован в папку: ${ORANGE}$(which bat)${NOFORMAT}" &&\
-      log "Бинарный файл bam скопирован загружен"
+      log "Бинарный файл bat скопирован загружен"
     cp -rfv "${TMP_FOLDER}"/autocomplete/bat.bash "${DEST_BASH_COMPLETION}"
 	  echo -e "${GREEN}Файл ${ORANGE}bat.bash${GREEN} скопирован в папку: ${ORANGE}${DEST_BASH_COMPLETION}${NOFORMAT}" &&\
       log "Файл bat.bash скопирован в папку /etc/bash_completion.d/"

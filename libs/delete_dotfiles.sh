@@ -18,6 +18,7 @@ color_string
   rm -rfv "${HOME}"/.vim
   rm -rfv "${HOME}"/.config
   rm -rfv "${HOME}"/.fzf
+  rm -rfv "${HOME}"/.dircolors
 color_string
 echo -e "${GREY}Конец удаления ${YELLOW}dotfiles${NOFORMAT}"
 color_string
