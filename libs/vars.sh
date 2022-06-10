@@ -28,6 +28,12 @@ DEST_LOCALBIN="/usr/local/bin"
 DEST_BASH_COMPLETION="/etc/bash_completion.d"
 DEST_MAN="/usr/share/man/man1"
 
+#### Custom binaries in alphabet order
+
+BAT_SOURCE="https://github.com/sharkdp/bat/releases/download/v0.21.0/bat-v0.21.0-x86_64-unknown-linux-musl.tar.gz"
+BTM_SOURCE_ARCH="https://github.com/ClementTsang/bottom/releases/download/0.6.8/bottom_x86_64-unknown-linux-musl.tar.gz"
+BTM_CONFIG="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.config/bottom/bottom.toml"
+
 CHT_SOURCE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.config/cht.sh/cht.sh"
 CHT_COMPL="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.config/cht.sh/chtsh.bash"
 
@@ -35,65 +41,35 @@ CHEAT_SOURCE="https://github.com/cheat/cheat/releases/download/4.2.3/cheat-linux
 CHEAT_COMPL="https://raw.githubusercontent.com/cheat/cheat/master/scripts/cheat.bash"
 CHEATSHEETS_SOURCE="https://raw.githubusercontent.com/cheat/cheat/master/scripts/git/cheatsheets"
 
-SSS_SOURCE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/bins/sss"
-
-DUF_SOURCE_DEB="https://github.com/muesli/duf/releases/download/v0.7.0/duf_0.7.0_linux_amd64.deb"
-DUF_SOURCE_RPM="https://github.com/muesli/duf/releases/download/v0.7.0/duf_0.7.0_linux_amd64.rpm"
-
-PROCS_SOURCE_ARCH="https://github.com/dalance/procs/releases/download/v0.12.0/procs-v0.12.0-x86_64-lnx.zip"
-PROCS_COMPL="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.config/procs/procs.bash"
-PROCS_CONFIG="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.config/procs/config.toml"
-
-GRC_SOURCE_ARCH="https://github.com/garabik/grc/archive/master.zip"
+DISKUS_SOURCE="https://github.com/sharkdp/diskus/releases/download/v0.7.0/diskus-v0.7.0-x86_64-unknown-linux-musl.tar.gz"
+DOG_SOURCE="https://github.com/ogham/dog/releases/download/v0.1.0/dog-v0.1.0-x86_64-unknown-linux-gnu.zip"
+DS_SOURCE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/bins/ds"
+DUF_SOURCE_DEB="https://github.com/muesli/duf/releases/download/v0.8.1/duf_0.8.1_linux_arm64.deb"
+DUF_SOURCE_RPM="https://github.com/muesli/duf/releases/download/v0.8.1/duf_0.8.1_linux_amd64.rpm"
 
 EXA_SOURCE_ARCH="https://github.com/ogham/exa/releases/download/v0.10.1/exa-linux-x86_64-v0.10.1.zip"
 
-BTM_SOURCE_ARCH="https://github.com/ClementTsang/bottom/releases/download/0.6.6/bottom_x86_64-unknown-linux-gnu.tar.gz"
-BTM_CONFIG="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.config/bottom/bottom.toml"
-
-BAT_SOURCE="https://github.com/sharkdp/bat/releases/download/v0.19.0/bat-v0.19.0-x86_64-unknown-linux-musl.tar.gz"
-
-FZF_BIN_SOURCE="https://github.com/junegunn/fzf/releases/download/0.29.0/fzf-0.29.0-linux_amd64.tar.gz"
+FDFIND_SOURCE="https://github.com/sharkdp/fd/releases/download/v8.4.0/fd-v8.4.0-x86_64-unknown-linux-musl.tar.gz"
+FZF_BIN_SOURCE="https://github.com/junegunn/fzf/releases/download/0.30.0/fzf-0.30.0-linux_amd64.tar.gz"
 FZF_MAN_SOURCE="https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf.1"
 FZF_COMPL_SOURCE="https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash"
 FZF_KEYS_SOURCE="https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.bash"
 
-GDU_SOURCE="https://github.com/dundee/gdu/releases/download/v5.13.1/gdu_linux_amd64.tgz"
+GDU_SOURCE="https://github.com/dundee/gdu/releases/download/v5.14.0/gdu_linux_arm64.tgz"
+GRC_SOURCE_ARCH="https://github.com/garabik/grc/archive/master.zip"
 
-DISKUS_SOURCE="https://github.com/sharkdp/diskus/releases/download/v0.7.0/diskus-v0.7.0-x86_64-unknown-linux-musl.tar.gz"
+LF_SOURCE="https://github.com/gokcehan/lf/releases/download/r27/lf-linux-amd64.tar.gz"
+LSCOLORS_SOURCE="https://github.com/sharkdp/lscolors/releases/download/v0.10.0/lscolors-v0.10.0-x86_64-unknown-linux-musl.tar.gz"
 
-FDFIND_SOURCE="https://github.com/sharkdp/fd/releases/download/v8.3.2/fd-v8.3.2-x86_64-unknown-linux-musl.tar.gz"
+PROCS_SOURCE_ARCH="https://github.com/dalance/procs/releases/download/v0.12.3/procs-v0.12.3-x86_64-linux.zip"
+PROCS_COMPL="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.config/procs/procs.bash"
+PROCS_CONFIG="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/.config/procs/config.toml"
 
 RIPGREP_SOURCE="https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz"
 
-DS_SOURCE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/bins/ds"
-
-DOG_SOURCE="https://github.com/ogham/dog/releases/download/v0.1.0/dog-v0.1.0-x86_64-unknown-linux-gnu.zip"
+SSS_SOURCE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/bins/sss"
 
 TLDR_BIN_SOURCE="https://github.com/dbrgn/tealdeer/releases/download/v1.5.0/tealdeer-linux-x86_64-musl"
 TLDR_COMPL_SOURCE="https://github.com/dbrgn/tealdeer/releases/download/v1.5.0/completions_bash"
 
-LSCOLORS_SOURCE="https://github.com/sharkdp/lscolors/releases/download/v0.10.0/lscolors-v0.10.0-x86_64-unknown-linux-musl.tar.gz"
 VIVID_SOURCE="https://github.com/sharkdp/vivid/releases/download/v0.8.0/vivid-v0.8.0-x86_64-unknown-linux-musl.tar.gz"
-
-
-
-# Пользовательске переменные
-#DEST_FILES="\
-#$HOME/.bash_aliases,\
-#$HOME/.bashrc,\
-#$HOME/.fuzzy-sys.plugin.sh,\
-#$HOME/.inputrc,\
-#$HOME/.profile,\
-#$HOME/.vimrc"
-
-#DYNMOTD_SOURCE="https://raw.githubusercontent.com/rubtsove/dotfiles/master/local/dynmotd.sh"
-#GITHUB_PATH="https://raw.githubusercontent.com/rubtsove/dotfiles2/master/sources"
-#CHT_SOURCE="${GITHUB_PATH}/.config/cht.sh/cht.sh"
-#CHT_COMPL="${GITHUB_PATH}/.config/cht.sh/chtsh.bash"
-#CHEAT_COMPL="${GITHUB_PATH}/.config/cheat/cheat.bash"
-#SSS_SOURCE="${GITHUB_PATH}/.config/sss"
-#PROCS_CONFIG="${GITHUB_PATH}/.config/procs/config.toml"
-#PROCS_COMPL="${GITHUB_PATH}/.config/procs/procs.bash"
-#BTM_CONFIG="${GITHUB_PATH}/.config/bottom/bottom.toml"
-#DS_SOURCE="${GITHUB_PATH}/bins/ds"
